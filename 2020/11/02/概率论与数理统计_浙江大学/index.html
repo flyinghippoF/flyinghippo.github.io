@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="概率论与数理统计！！！">
+  <meta name="description" content="概率论与数理统计！！！ 未看完">
 <meta property="og:type" content="article">
 <meta property="og:title" content="概率论与数理统计_浙江大学">
 <meta property="og:url" content="http://example.com/2020/11/02/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1_%E6%B5%99%E6%B1%9F%E5%A4%A7%E5%AD%A6/index.html">
 <meta property="og:site_name" content="flyinghippo">
-<meta property="og:description" content="概率论与数理统计！！！">
+<meta property="og:description" content="概率论与数理统计！！！ 未看完">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-11-01T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-11-03T14:23:35.572Z">
+<meta property="article:modified_time" content="2020-11-23T02:49:04.993Z">
 <meta property="article:author" content="hippo">
 <meta name="twitter:card" content="summary">
 
@@ -180,7 +180,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-11-03 22:23:35" itemprop="dateModified" datetime="2020-11-03T22:23:35+08:00">2020-11-03</time>
+                <time title="Modified: 2020-11-23 10:49:04" itemprop="dateModified" datetime="2020-11-23T10:49:04+08:00">2020-11-23</time>
               </span>
 
           
@@ -195,7 +195,516 @@
 
       
         <p>概率论与数理统计！！！</p>
+<p>未看完</p>
 <a id="more"></a>
+
+
+
+<h1 id="第一章-概率论的基本概念"><a href="#第一章-概率论的基本概念" class="headerlink" title="第一章 概率论的基本概念"></a>第一章 概率论的基本概念</h1><ul>
+<li>确定性现象、统计规律性、随机现象</li>
+</ul>
+<h2 id="1-1-随机试验"><a href="#1-1-随机试验" class="headerlink" title="1.1 随机试验"></a>1.1 随机试验</h2><ul>
+<li>随机试验为满足以下三种条件的实验：<ul>
+<li>可以在相同的条件下重复地进行：</li>
+<li>每次试验的可能结果不止一个,并且能事先明确试验的所有可能结果：</li>
+<li>进行一次试验之前不能确定哪一个结果会出现.</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-2-样本空间、随机事件"><a href="#1-2-样本空间、随机事件" class="headerlink" title="1.2 样本空间、随机事件"></a>1.2 样本空间、随机事件</h2><ul>
+<li><p><strong>样本空间：</strong>把随机试验E的所有可能结果组成的集合称为E的样本空间，记为S</p>
+</li>
+<li><p><strong>样本点：</strong>样本空间的元素，即E的每个结果</p>
+</li>
+<li><p>实验E的样本空间S的子集为E的<strong>随机事件</strong>，简称<strong>事件</strong>。</p>
+</li>
+<li><p>仅当这一子集中的一个样本点出现时，称这一<strong>事件发生。</strong></p>
+</li>
+<li><p>由一个样本点组成的单点集，称为<strong>基本事件</strong>。</p>
+</li>
+<li><p>必然事件、不可能事件</p>
+</li>
+<li><p>事件之间的相互关系：</p>
+<ul>
+<li>若 $A \subset B$,称事件B包含事件A，若两个事件互为包含，则其两个事件相等。</li>
+<li>$$ A \cup B$$ 称为事件A与事件B的<strong>和事件</strong></li>
+<li>$$ A\cap  B$$称为事件A与事件B的<strong>积事件</strong>，其记做$A B .$</li>
+<li>$A-B={x \mid x \in A$ 且 $x \notin B}$<strong>差事件</strong></li>
+<li>若 $A \cap B=\varnothing,$ 则称事件 $A$ 与 $B$ 是<strong>互不相容</strong>的,或互斥的.</li>
+<li>若 $A \cup B=S$ 且 $A \cap B=\varnothing,$ 则称事件 $A$ 与事件 $B$ 互为<strong>逆事件</strong>. 又称事件 $A$ 与事件 $B$ 互为<strong>对立事件.</strong> </li>
+</ul>
+</li>
+<li><p>运算法则：</p>
+<ul>
+<li>交换律 $: A \cup B=B \cup A ; A \cap B=B \cap A .$</li>
+<li>结合律 $: A \cup(B \cup C)=(A \cup B) \cup C $;     $ A \cap(B \cap C)=(A \cap B) \cap C$</li>
+<li>分配律 $: A \cup(B \cap C)=(A \cup B) \cap(A \cup C) ;  $    $A \cap(B \cup C)=(A \cap B) \cup(A \cap C)$</li>
+<li>德摩根律 $: \overline{A \cup B}=\bar{A} \cap \bar{B} ; \quad \overline{A \cap B}=\bar{A} \cup \bar{B}$</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-3-频率与概率"><a href="#1-3-频率与概率" class="headerlink" title="1.3 频率与概率"></a>1.3 频率与概率</h2><ul>
+<li><p>频率、频数、频率的一些性质</p>
+</li>
+<li><p>概率：表示某一个事件发生的可能性的大小。其要满足非负性、规范性、克烈可加性。</p>
+</li>
+<li><p>概率的一些性质：</p>
+<ol>
+<li><p>$$ P(\varnothing)=0 $$</p>
+</li>
+<li><p>(有限可加性) 若 $A_{1}, A_{2}, \cdots, A_{n}$ 是两两互不相容的事件,则有$$P\left(A_{1} \cup A_{2} \cup \cdots \cup A_{n}\right)=P\left(A_{1}\right)+P\left(A_{2}\right)+\cdots+P\left(A_{n}\right)$$</p>
+</li>
+<li><p>设 $A, B$ 是两个事件,若 $A \subset B$,则有<br>$$<br>\begin{array}{c}<br>P(B-A)=P(B)-P(A) \<br>P(B) \geqslant P(A)<br>\end{array}<br>$$</p>
+</li>
+<li><p>对于任一事件 $A$,$P(A) \leqslant 1$</p>
+</li>
+<li><p>（逆事件概率）对于任一事件 $A$,有$P(\bar{A})=1-P(A)$</p>
+</li>
+<li><p>(加法公式)对于任意两事件 $A, B$ 有$P(A \cup B)=P(A)+P(B)-P(A B)$</p>
+</li>
+</ol>
+</li>
+<li><p>一般,对于任意 $n$ 个事件 $A_{1}, A_{2}, \cdots, A_{n},$ 可以用归纳法证得<br>$\begin{aligned} P\left(A_{1} \cup A_{2} \cup \cdots \cup A_{n}\right)=&amp; \sum_{i=1}^{n} P\left(A_{i}\right)-\sum_{1 \leqslant i&lt;j \leqslant n} P\left(A_{i} A_{j}\right) \ &amp;+\sum_{1 \leqslant i&lt;j&lt;k \leqslant n} P\left(A_{i} A_{j} A_{k}\right)+\cdots+(-1)^{n-1} P\left(A_{1} A_{2} \cdots A_{n}\right) \end{aligned}$</p>
+</li>
+</ul>
+<h2 id="1-4-等可能概型（古典概型）"><a href="#1-4-等可能概型（古典概型）" class="headerlink" title="1.4 等可能概型（古典概型）"></a>1.4 等可能概型（古典概型）</h2><ul>
+<li>等可能概型，也叫古典概型有以下两个特点：<ol>
+<li>实验的样本空间只包含有限个元素</li>
+<li>实验中每个基本事件发生的可能性相同.</li>
+</ol>
+</li>
+<li>放回抽样、不放回抽样</li>
+<li>实际推断原理：概率很小的事件在一次试验中实际上几乎是不发生的</li>
+</ul>
+<h2 id="1-5-条件概率"><a href="#1-5-条件概率" class="headerlink" title="1.5 条件概率"></a>1.5 条件概率</h2><ul>
+<li><p><strong>定义：</strong> 设 $A, B$ 是两个事件,且 $P(A)&gt;0,$ 称<br>$$<br>P(B \mid A)=\frac{P(A B)}{P(A)}<br>$$<br>为在事件 $A$ <strong>发生的条件下</strong>事件 $B$ 发生的<strong>条件概率</strong>.</p>
+</li>
+<li><p><strong>乘法定理：</strong>设 $P(A)&gt;0,$ 则有<br>$$<br>P(A B)=P(B \mid A) P(A)<br>$$</p>
+</li>
+<li><p>一般,设 $A_{1}, A_{2}, \cdots, A_{n}$ 为 $n$ 个事件, $n \geqslant 2,$ 且 $P\left(\ A_{1} \ A_{2} \cdots A_{n-1}\right)&gt;0,$ 则有$P\left(A_{1} A_{2} \cdots A_{n}\right)=P\left(A_{n} \mid A_{1} A_{2} \cdots A_{n-1}\right) P\left(A_{n-1} \mid A_{1} A_{2} \cdots A_{n-2}\right) \cdots P\left(A_{2} \mid A_{1}\right) P\left(A_{1}\right)$</p>
+</li>
+<li><p>定义  设 $S$ 为试验 $E$ 的样本空间 $, B_{1}, B_{2}, \cdots, B_{n}$ 为 $E$ 的一组事件.若<br>(i) $B_{i} B_{j}=\varnothing, i \neq j, i, j=1,2, \cdots, n$<br>(ii) $B_{1} \cup B_{2} \cup \cdots \cup B_{n}=S$,<br>则称 $B_{1}, B_{2}, \cdots, B_{n}$ 为样本空间 $S$ 的一个<strong>划分</strong>.</p>
+</li>
+<li><p><strong>全概率公式：</strong></p>
+<p>定理 设试验 $E$ 的样本空间为 $S, A$ 为 $E$ 的事件, $B_{1}, B_{2}, \cdots, B_{n}$ 为 $S$ 的一个划分, 且 $P\left(B_{i}\right)&gt;0(i=1,2, \cdots, n),$ 则<br>$$<br>\begin{aligned}<br>P(A)=&amp; P\left(A \mid B_{1}\right) P\left(B_{1}\right)+P\left(A \mid B_{2}\right) P\left(B_{2}\right)+\cdots+P\left(A \mid B_{n}\right) P\left(B_{n}\right)<br>\end{aligned}<br>$$</p>
+</li>
+<li><p><strong>贝叶斯公式：</strong></p>
+<p>定理 设试验 $E$ 的样本空间为 $S . A$ 为 $E$ 的事件 $, B_{1}, B_{2}, \cdots, B_{n}$ 为 $S$ 的一个划分, 且 $P(A)&gt;0, P\left(B_{i}\right)&gt;0(i=1,2, \cdots, n),$ 则<br>$$<br>P\left(B_{i} \mid A\right)=\frac{P\left(A \mid B_{i}\right) P\left(B_{i}\right)}{\sum_{j=1}^{n} P\left(A \mid B_{j}\right) P\left(B_{j}\right)}, \quad i=1,2, \cdots, n<br>$$</p>
+</li>
+<li><p>特别取 <strong>$n=2,$</strong> 并将 $B_{1}$ 记为 $B$, 此时 $B_{2}$ 就是 $\bar{B}$,那么， 全概率公式和贝叶斯公式分别成为<br>$$<br>\begin{array}{c}<br>P(A)=P(A \mid B) P(B)+P(A \mid \bar{B}) P(\bar{B}) \<br>\<br>P(B \mid A)=\frac{P(A B)}{P(A)}=\frac{P(A \mid B) P(B)}{P(A \mid B) P(B)+P(A \mid \bar{B}) P(\bar{B})}<br>\end{array}<br>$$</p>
+</li>
+</ul>
+<h2 id="1-6-独立性"><a href="#1-6-独立性" class="headerlink" title="1.6 独立性"></a>1.6 独立性</h2><ul>
+<li><p><strong>定义：</strong>设 $A, B$ 是两事件,如果满足等式<br>$$<br>P(A B)=P(A) P(B)<br>$$<br>则称事件 $A, B$ 相互独立,简称 $A, B$ 独立.</p>
+</li>
+<li><p><strong>定理一：</strong>设 $A, B$ 是两事件,且 $P(A)&gt;0 .$ 若 $A, B$ 相互独立,则 $P(B \mid A)=$ $P(B) .$ 反之亦然.</p>
+</li>
+<li><p><strong>定理二：</strong>若事件 $A$ 与 $B$ 相互独立,则下列各对事件也相互独立:$A$ 与 $\bar{B}, \bar{A}$ 与 $B, \bar{A}$ 与 $\bar{B}$.</p>
+</li>
+<li><p><strong>定义：</strong>设 $A, B, C$ 是三个事件,如果满足等式<br>$$<br>\left.\begin{array}{l}<br>P(A B)=P(A) P(B) \<br>P(B C)=P(B) P(C) \<br>P(A C)=P(A) P(C) \<br>P(A B C)=P(A) P(B) P(C)<br>\end{array}\right}<br>$$<br>则称事件 $A, B, C$ 相互独立.</p>
+</li>
+<li><p>一般,设 $A_{1}, A_{2}, \cdots, A_{n}$ 是 $n （ n \geqslant 2$ )个事件,如果对于其中任意 2 个,任意 3个, $\cdots,$ 任意 $n$ 个事件的积事件的概率,都等于各事件概率之积,则称事件 $A_{1}$, $A_{2}, \cdots, A_{n}$ <strong>相互独立</strong>.</p>
+</li>
+</ul>
+<h1 id="第二章-随机变量及其分布"><a href="#第二章-随机变量及其分布" class="headerlink" title="第二章 随机变量及其分布"></a>第二章 随机变量及其分布</h1><h2 id="2-1-随机变量"><a href="#2-1-随机变量" class="headerlink" title="2.1 随机变量"></a>2.1 随机变量</h2><ul>
+<li><strong>定义：</strong>设随机试验的样本空间为 $S={e} . X=X(e)$ 是定义在样本空间 $S$ 上的实值单值函数 $.$ 称 $X=X(e)$ 为随机变量.</li>
+<li>一般以大写的字母如 $X, Y, Z, W, \cdots$ 表示随机变量,而以小写字母 $x, y, z, w, \cdots$ 表示实数 $.$ </li>
+<li>随机变量的取值随试验的结果而定，在试验之前不能预知它取什么值,且它的取值有一定的概率 . </li>
+</ul>
+<h2 id="2-2-离散型随机变量及其分布律"><a href="#2-2-离散型随机变量及其分布律" class="headerlink" title="2.2 离散型随机变量及其分布律"></a>2.2 离散型随机变量及其分布律</h2><ul>
+<li><p>有些随机变量，它全部可能取到的值是有限个或可列无限多个,这种随机变量称为<strong>离散型随机变量</strong>・</p>
+</li>
+<li><p>设离散型随机变量 $X$ 所有可能取的值为 $x_{k}(k=1,2, \cdots), X$ 取各个可能值 的概率，即事件 $\left{X=x_{k}\right}$ 的概率,为<br>$$<br>P\left{X=x_{k}\right}=p_{k}, k=1,2, \cdots<br>$$<br>由概率的定义, $p_{k}$ 满足如下两个条件 :<br>$1^{\circ} \quad p_{k} \geqslant 0, k=1,2, \cdots$</p>
+<p>$2^{\circ} \quad \sum_{k=1}^{\infty} p_{k}=1$</p>
+</li>
+<li><p>分布律</p>
+</li>
+<li><p>三种重要的离散型随机变量</p>
+<ol>
+<li><p><strong>(0-1)分布:</strong></p>
+<p>设随机变量 $X$ 只可能取 0 与 1 两个值,它的分布律是<br>$$<br>P{X=k}=p^{k}(1-p)^{1-k}, k=0,1 \quad(0&lt;p&lt;1)<br>$$<br>则称 $X$ 服从以 $p$ 为参数的 $(0-1)$ 分布或两点分布.</p>
+<ul>
+<li>对于一个随机试验,如果它的样本空间只包含两个元素, 即 $S=\left{e_{1}, e_{2}\right},$ 我 们总能在 S 上定义一个服从 (0ー1) 分布的随机变量</li>
+</ul>
+</li>
+<li><p><strong>伯努利试验、二项分布</strong></p>
+<ul>
+<li><p>设试验 $E$ 只有两个可能结果 $: A$ 及 $\bar{A},$ 则称 $E$ 为<strong>伯努利 ( Bernoulli) 试验</strong> $.$ 设 $P(A)=p(0&lt;p&lt;1),$ 此时 $P(\bar{A})=1-p .$ 将 $E$ <strong>独立重复</strong>地进行 $n$ 次,则称这 一串重复的独立试验为 <strong>$n$ 重伯努利试验</strong></p>
+</li>
+<li><p>故在 $n$ 次试验中A 发生 $k$ 次的概率为 $\left(\begin{array}{l}n \ k\end{array}\right) p^{k}(1-p)^{n-k},$ 记 $q=1-p,$ 即有</p>
+</li>
+</ul>
+<p>$$<br>P{X=k}=\left(\begin{array}{l}<br>n \<br>k<br>\end{array}\right) p^{k} q^{n-k}, k=0,1,2, \cdots, n<br>$$</p>
+<ul>
+<li>显然</li>
+</ul>
+<p>$$<br>\begin{array}{c}<br>P{X=k} \geqslant 0, k=0,1,2, \cdots, n \<br>\sum_{k=0}^{n} P{X=k}=\sum_{k=0}^{n}\left(\begin{array}{l}<br>n \<br>k<br>\end{array}\right) p^{k} q^{n-k}=(p+q)^{n}=1<br>\end{array}<br>$$</p>
+<ul>
+<li>$\left(\begin{array}{l}n \ k\end{array}\right) p^{k} q^{n-k}$ 刚好是二项式 $(p+q)^{n}$ 的展开式中出现 $p^{k}$ 的那一项,我们称随机变量 $X$ 服从参数为 $n, p$ 的二项分布,并记为 $X \sim b(n, p) .$</li>
+</ul>
+</li>
+<li><p><strong>泊松分布</strong></p>
+<ul>
+<li>设随机变量 $X$ 所有可能取的值为 $0,1,2, \cdots,$ 而取各个值的概率为<br>$$<br>P{X=k}=\frac{\lambda^{k} \mathrm{e}^{-\lambda}}{k !}, k=0,1,2, \cdots<br>$$<br>其中 $\lambda&gt;0$ 是常数. 则称 $X$ 服从参数为 $\lambda$ 的泊松分布,记为 $X \sim \pi(\lambda)$.</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>用泊松分布来还近二项分布的定理:<strong>泊松定理</strong>:</p>
+<p>设 $\lambda&gt;0$ 是一个常数, $n$ 是任意正整数,设 $n p_{n}=\lambda,$ 则对于任一固 定的非负整数 $k$,有<br>$$<br>\lim <em>{n \rightarrow \infty}\left(\begin{array}{l}<br>n \<br>k<br>\end{array}\right) p</em>{n}^{k}\left(1-p_{n}\right)^{n-k}=\frac{\lambda^{k} \mathrm{e}^{-\lambda}}{k !}<br>$$</p>
+</li>
+<li><p>也就是说以 $n, p$ 为参数的二项分布的概率值可以由参数为 $\lambda=n p$ 的泊松分布的概率值近似. </p>
+</li>
+</ul>
+<h2 id="2-3-随机变量的分布函数"><a href="#2-3-随机变量的分布函数" class="headerlink" title="2.3 随机变量的分布函数"></a>2.3 随机变量的分布函数</h2><ul>
+<li><p><strong>定义：</strong> 设 $X$ 是一个随机变量, $x$ 是任意实数，函数<br>$$<br>F(x)=P{X \leqslant x},-\infty&lt;x&lt;\infty<br>$$<br>称为 $X$ 的分布函数.</p>
+</li>
+<li><p>对于任意实数 $x_{1}, x_{2}\left(x_{1}&lt;x_{2}\right),$ 有<br>$$<br>\begin{aligned}<br>P\left{x_{1}&lt;X \leqslant x_{2}\right} &amp;=P\left{X \leqslant x_{2}\right}-P\left{X \leqslant x_{1}\right} \<br>&amp;=F\left(x_{2}\right)-F\left(x_{1}\right)<br>\end{aligned}<br>$$</p>
+</li>
+<li><p>分布函数 $F(x)$ 具有以下的基本性质 :<br>$1^{\circ} F(x)$ 是一个不减函数. 对于任意实数 $x_{1}, x_{2}\left(x_{1}&lt;x_{2}\right),$ 有<br>$$<br>F\left(x_{2}\right)-F\left(x_{1}\right)=P\left{x_{1}&lt;X \leqslant x_{2}\right} \geqslant 0<br>$$<br>$2^{\circ} 0 \leqslant F(x) \leqslant 1,$ 且<br>$$<br>\begin{array}{c}<br>F(-\infty)=\lim _{x \rightarrow-\infty} F(x)=0 \<br>F(\infty)=\lim _{x \rightarrow \infty} F(x)=1<br>\end{array}<br>$$<br>$3^{\circ} F(x+0)=F(x),$ 即 $F(x)$ 是右连续的.</p>
+<p>具备性质1、2、3的函数 $F(x)$必是某个随机变量的分布函数。（充分必要）</p>
+</li>
+</ul>
+<h2 id="3-4-连续型随机变量及其概率密度"><a href="#3-4-连续型随机变量及其概率密度" class="headerlink" title="3.4 连续型随机变量及其概率密度"></a>3.4 连续型随机变量及其概率密度</h2><ul>
+<li>如果对于随机变量 $X$ 的分布函数$F(x),$ 存在非负 函数 $f(x),$ 使对于任意实数 $x$ 有<br>$$<br>F(x)=\int_{-\infty}^{x} f(t) \mathrm{d} t<br>$$<br>则称 $X$ 为<strong>连续型随机变量</strong>,其中函数 $f(x)$ 称为 $X$ 的<strong>概率密度函数</strong>，简称概率密度.</li>
+</ul>
+<ul>
+<li><p>概率密度 $f(x)$ 具有以下性质 :<br>1 $f(x) \geqslant 0$<br>2 ${} \int_{-\infty}^{\infty} f(x) \mathrm{d} x=1.$<br>3 对子任意实数 $x_{1}, x_{2}\left(x_{1} \leqslant x_{2}\right)$.<br>$$<br>P\left{x_{1}&lt;X \leqslant x_{2}\right}=F\left(x_{2}\right)-F\left(x_{1}\right)=\int_{x_{1}}^{x_{2}} f(x) \mathrm{d} x<br>$$<br>$4$ 若 $f(x)$ 在点 $x$ 处连续,则有 $F^{\prime}(x)=f(x)$. </p>
+</li>
+<li><p>这就是说,若 $A$ 是不可能事件,则有 $P(A)=0 ;$ 反之,若 $P(A)=0,$ 并不一定意味着 $A$ 是不可能 事件.</p>
+</li>
+<li><p>三种重要的连续型随机变量:</p>
+<ol>
+<li><p>均勿分布:</p>
+<ul>
+<li>若连续型随机变量 $X$ 具有概率密度</li>
+</ul>
+<p>$$<br>f(x)=\left{\begin{array}{ll}<br>\frac{1}{b-a}, &amp; a&lt;x&lt;b \<br>0, &amp; \text { 其他 },<br>\end{array}\right.<br>$$<br>​    则称 $X$ 在区间 $(a, b)$ 上服从均匀分布. 记为 $X \sim U(a, b) .$</p>
+<ul>
+<li><strong>$X$ 的分布函数为</strong></li>
+</ul>
+<p>$$<br>F(x)=\left{\begin{array}{ll}<br>0, &amp; x&lt;a \<br>\frac{x-a}{b-a}, &amp; a \leqslant x&lt;b \<br>1, &amp; x \geqslant b<br>\end{array}\right.<br>$$</p>
+</li>
+<li><p>指数分布:</p>
+<ul>
+<li><p>若连续型随机变量 $X$ 的概率密度为<br>$$<br>f(x)=\left{\begin{array}{ll}<br>\frac{1}{\theta} \mathrm{e}^{-x / \theta}, x&gt;0 \<br>0, \text { 其他 }<br>\end{array}\right.<br>$$<br>其中 $\theta&gt;0$ 为常数,则称 $X$ 服从参数为 $\theta$ 的指数分布.</p>
+</li>
+<li><p>随机变量 $X$ 的分布函数：<br>$$<br>F(x)=\left{\begin{array}{ll}<br>1-\mathrm{e}^{-x / \theta}, &amp; x&gt;0 \<br>0, &amp; \text { 其他. }<br>\end{array}\right.<br>$$</p>
+</li>
+<li><p>指数分布具有<strong>无记忆性</strong></p>
+</li>
+</ul>
+</li>
+<li><p>正态分布：</p>
+<ul>
+<li><p>若连续型随机变量 $X$ 的概率密度为<br>$$<br>f(x)=\frac{1}{\sqrt{2 \pi} \sigma} \mathrm{e}^{-\frac{(x- \mu)^{2}}{2 \sigma^{2}}},-\infty&lt;x&lt;\infty<br>$$<br>其中 $\mu, \sigma(\sigma&gt;0)$ 为常数,则称 $X$ 服从参数为 $\mu, \sigma$ 的正态分布或高斯 ( Gauss)分布,记为 $X \sim N\left(\mu, \sigma^{2}\right)$.</p>
+</li>
+<li><p>性质：</p>
+<ol>
+<li><p>曲线关于 $x=\mu$ 对称・这表明对于任意 $h&gt;0$ 有<br>$$<br>{P{\mu-h}&lt;X \leqslant \mu}=P{\mu&lt;X \leqslant \mu+h}<br>$$</p>
+</li>
+<li><p>当 $x=\mu$ 时取到最大<br>$$<br>\operatorname{}f(\mu)=\frac{1}{\sqrt{2 \pi} \sigma}<br>$$</p>
+</li>
+</ol>
+</li>
+<li><p>$x$ 离 $\mu$ 越远 $, f(x)$ 的值越小. 这表明对于同样长度的区间,当区间离 $\mu$ 越远, $X$ 落在这个区间上的概率越小.</p>
+</li>
+<li><p>在 $x=\mu \pm \sigma$ 处曲线有拐点.曲线以 $O x$ 轴为渐近线. </p>
+</li>
+<li><p>如果固定 $\sigma,$ 改变 $\mu$ 的值,则图形沿着 $O x$ 轴平移,而不改变其形状，可见正态分布的概率密度曲线 $y=f(x)$ 的位置完全由参数 $\mu$ 所确 定. $\mu$ 称为位置参数.</p>
+</li>
+<li><p>如果固定 $\mu,$ 改变 $\sigma,$ 由于最大值 $f(\mu)=\frac{1}{\sqrt{2 \pi} \sigma},$ 可知当 $\sigma$ 越小时图形变得越尖，因而 $X$ 落在 $\mu$ 附近的概率越大.</p>
+</li>
+<li><p>得 $X$ 的分布函数为<br>$$<br>F(x)=\frac{1}{\sqrt{2 \pi} \sigma} \int_{-\infty}^{x} \mathrm{e}^{-\frac{(t-\mu)^{2}}{2 \sigma^{2}}} \mathrm{d} t<br>$$</p>
+</li>
+<li><p>特别 $,$ 当 $\mu=0, \sigma=1$ 时称随机变量 $X$ 服从标准正态分布. 其概率密度和分 布函数分别用 $\varphi(x), \Phi(x)$ 表示，即有<br>$$<br>\begin{array}{c}<br>\varphi(x)=\frac{1}{\sqrt{2 \pi}} \mathrm{e}^{-x^{2} / 2} \<br>\Phi(x)=\frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{x} \mathrm{e}^{-t^{2} / 2} \mathrm{d} t<br>\end{array}<br>$$<br>易知<br>$$<br>\Phi(-x)=1-\Phi(x)<br>$$</p>
+</li>
+<li><p>一般,若 $X \sim N\left(\mu, \sigma^{2}\right)$,我们只要通过一个线性变换就能将它化成标准正态分布.<br><strong>引理：</strong>若 $X \sim N\left(\mu, \sigma^{2}\right),$ 则 $Z=\frac{X-\mu}{\sigma} \sim N(0,1)$</p>
+</li>
+<li><p>设 $X \sim N(0,1),$ 若 $z_{\alpha}$ 满足条件<br>$$<br>P\left{X&gt;z_{\alpha}\right}=\alpha, 0&lt;\alpha&lt;1,<br>$$<br>则称点 $z_{a}$ 为标准正态分布的<strong>上 $\alpha$ 分位点</strong> </p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="2-5-随机变量的函数的分布"><a href="#2-5-随机变量的函数的分布" class="headerlink" title="2.5 随机变量的函数的分布"></a>2.5 随机变量的函数的分布</h2><ul>
+<li><strong>定理：</strong>设随机变量 $X$ 具有概率密度 $f_{X}(x),-\infty&lt;x&lt;\infty,$ 又设函数 $g(x)$ 处处可导且恒有 $g^{\prime}(x)&gt;0$ (或恒有 $\left.g^{\prime}(x)&lt;0\right),$ 则 $Y=g(X)$ 是连续型随机变量, 其概率密度为<br>$$<br>f_{Y}(y)=\left{\begin{array}{ll}<br>f_{X}[h(y)]\left|h^{\prime}(y)\right|, &amp; \alpha&lt;y&lt;\beta \<br>0, &amp; \text { 其他 }<br>\end{array}\right.<br>$$<br>其中 $\alpha=\min {g(-\infty), g(\infty)}, \beta=\max {g(-\infty), g(\infty)}, h(y)$ 是 $g(x)$ 的反函数.</li>
+</ul>
+<h1 id="第三章-多维随机变量及其分布"><a href="#第三章-多维随机变量及其分布" class="headerlink" title="第三章 多维随机变量及其分布"></a>第三章 多维随机变量及其分布</h1><h2 id="3-1-二维随机变量"><a href="#3-1-二维随机变量" class="headerlink" title="3.1 二维随机变量"></a>3.1 二维随机变量</h2><ul>
+<li><p>设 $E$ 是一个随机试验,它的样本空间是 $S={e},$ 设 $X=X(e)$ 和 $Y=Y(e)$ 是定义在 $S$上的随机变量,由它们构成的一个向量 $(X, Y)$, 叫做<strong>二维随机向量或二维随机变量。</strong></p>
+</li>
+<li><p>二维随机变量 $(X, Y)$ 的性质不仅与 $X$ 及 $Y$ 有关,而且还依赖于这两个随机 变量的相互关系. </p>
+</li>
+<li><p><strong>定义：</strong>设 $(X, Y)$ 是二维随机变量,对于任意实数 $x, y,$ 二元函数 :<br>$$<br>F(x, y)=P{(X \leqslant x) \cap(Y \leqslant y)} \stackrel{\text { 记成 }}{=} P{X \leqslant x, Y \leqslant y}<br>$$<br>称为二维随机变量 $(X, Y)$ 的<strong>分布函数</strong>,或称为随机变量 $X$ 和 $Y$ 的 <strong>联合分布函数。</strong></p>
+</li>
+<li><p>分布函数 $F(x, y)$ 具有以下的基本性质 :</p>
+<ol>
+<li><p>$F(x, y)$ 是变量 $x$ 和 $y$ 的不减函数，即对于任意固定的 $y,$ 当 $x_{2}&gt;x_{1}$ 时 $F\left(x_{2}, y\right) \geqslant F\left(x_{1}, y\right) ;$ 对于任意固定的 $x,$ 当 $y_{2}&gt;y_{1}$ 时 $F\left(x, y_{2}\right) \geqslant F\left(x, y_{1}\right) .$</p>
+</li>
+<li><p>$ 0 \leqslant F(x, y) \leqslant 1,$ 且对于任意固定的 $y, F(-\infty, y)=0$；对于任意固定的 $x, F(x,-\infty)=0$；$F(-\infty,-\infty)=0, F(\infty, \infty)=1$</p>
+</li>
+<li><p>$ F(x+0, y)=F(x, y), F(x, y+0)=F(x, y),$ 即 $F(x, y)$ 关于 $x$ 右连续关于 $y$ 也右连续. </p>
+</li>
+<li><p>对于任意 $\left(x_{1}, y_{1}\right),\left(x_{2}, y_{2}\right), x_{1}&lt;x_{2}, y_{1}&lt;y_{2},$ 下述不等式成立 :<br>$$<br>F\left(x_{2}, y_{2}\right)-F\left(x_{2}, y_{1}\right)+F\left(x_{1}, y_{1}\right)-F\left(x_{1}, y_{2}\right) \geqslant 0<br>$$</p>
+</li>
+</ol>
+</li>
+<li><p>如果二维随机变量 $(X, Y)$ 全部可能取到的值是有限对或可列无限多对,则称 $(X, Y)$ 是<strong>离散型的随机变量</strong>.</p>
+</li>
+<li><p><strong>离散型的随机变量</strong>有<strong>联合分布律</strong>的概念。</p>
+</li>
+<li><p><strong>离散型随机变量</strong> $X$ 和 $Y$ 的联合分布函数为<br>$$<br>F(x, y)=\sum_{x_{i}\leqslant x}\sum_{y_{j}\leqslant  y} p_{i j}<br>$$<br>其中和式是对一切满足 $x_{i} \leqslant x, y_{j} \leqslant y$ 的 $i, j$ 来求和的. </p>
+</li>
+<li><p>对于二维随机变量 $(X, Y)$ 的分布雨数 $F(x, y),$ 如果 存在非负的函数 $f(x, y)$ 使对于任意 $x, y$ 有<br>$$<br>F(x, y)=\int_{-\infty}^{y} \int_{-\infty}^{x} f(u, v) \mathrm{d} u \mathrm{d} v<br>$$<br>则称 $(X, Y)$ 是<strong>连续型的二维随机变量</strong>,函数 $f(x, y)$ 称为二维随机变量 $(X, Y)$ 的<strong>概率密度</strong>,或称为随机变畢 $X$ 和 $Y$ 的<strong>联合概率密度.</strong></p>
+</li>
+<li><p>按定义，概率密度 $f(x, y)$ 具有以下性质 :</p>
+<ol>
+<li>$f(x, y) \geqslant 0$</li>
+<li>$\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} f(x, y) \mathrm{d} x \mathrm{d} y=F(\infty, \infty)=1$</li>
+<li>设 $G$ 是 $x O y$ 平面上的区域,点 $(X, Y)$ 落在 $G$ 内的概率为</li>
+</ol>
+<p>$$<br>P{(X, Y) \in G}=\iint_{G} f(x, y) \mathrm{d} x \mathrm{d} y<br>$$</p>
+<ol start="4">
+<li>若 $f(x, y)$ 在点 $(x, y)$ 连续,则有</li>
+</ol>
+<p>$$<br>\frac{\partial^{2} F(x, y)}{\partial x \partial y}=f(x, y)<br>$$</p>
+</li>
+<li><p>设 $E$ 是一个 随机试验, 它的样本空间是 $S={e},$ 设 $X_{1}=$ $X_{1}(e), X_{2}=X_{2}(e), \cdots, X_{n}=X_{n}(e)$ 是定义在 $S$上的随机变量,由它们构成的一个 $n$ 维向量 $\left(X_{1}, X_{2}, \cdots, X_{n}\right)$ 叫做 $n$ 维随机向量或 $n$ 维随机变量. 对于任意 $n$ 个实数 $x_{1}, x_{2}, \cdots, x_{n}, n$ 元函数<br>$$<br>F\left(x_{1}, x_{2}, \cdots, x_{n}\right)=P\left{X_{1} \leqslant x_{1}, X_{2} \leqslant x_{2}, \cdots, X_{n} \leqslant x_{n}\right}<br>$$<br>称为 $n$ <strong>维随机变量 $\left(X_{1}, X_{2}, \cdots, X_{n}\right)$ 的分布函数</strong>或随机变量 $X_{1}, X_{2}, \cdots, X_{n}$ 的联合分布函数. 它具有类似于二维随机变量的分布函数的性质.</p>
+<h2 id="3-2-边缘分布"><a href="#3-2-边缘分布" class="headerlink" title="3.2 边缘分布"></a>3.2 边缘分布</h2></li>
+<li><p>二维随机变量 $(X, Y)$ 作为一个整体,具有分布函数 $F(x, y) .$ 而 $X$ 和 $Y$ 都是随机变量,各自也有分布函数,将它们分别记为 $F_{X}(x), F_{Y}(y),$ 依次称为二维随机变量 $(X, Y)$ 关于 $X$ 和关于 $Y$ 的<strong>边缘分布函数</strong>. </p>
+</li>
+<li><p>$$<br>\begin{array}{c}<br>F_{X}(x)=F(x, \infty)<br>\end{array}<br>$$</p>
+</li>
+<li><p>$$<br>F_{Y}(y)=F(\infty, y)<br>$$</p>
+</li>
+<li><p>对于<strong>离散型随机变量</strong>：<br>$$<br>F_{X}(x)=F(x, \infty)=\sum_{x_{i} \leqslant x} \sum_{j=1}^{\infty} p_{i j}<br>$$</p>
+</li>
+</ul>
+<ul>
+<li><p>$$<br>\begin{aligned}<br>p_{i\cdot} &amp;=\sum_{j=1}^{\infty} p_{i j}=P\left{X=x_{i}\right}, \quad i=1,2, \cdots \<br>p_{\cdot j} &amp;=\sum_{i=1}^{\infty} p_{i j}=P\left{Y=y_{j}\right}, \quad j=1,2, \cdots<br>\end{aligned}<br>$$<br>分别称 $p_{i} .(i=1,2, \cdots)$ 和 $p \cdot_{j}(j=1,2, \cdots)$ 为 $(X, Y)$ 关于 $X$ 和关于 $Y$ 的<strong>边缘分布律</strong>(注意,记号 $p_{i} .$ 中的“・”表示 $p_{i} .$ 是由 $p_{i j}$ 关于 $j$ 求和后得到的;同样,$p \cdot_{j}$是由 $p_{i j}$ 关于 $i$ 求和后得到的).</p>
+</li>
+<li><p>对于连续型随机变量 $(X, Y),$ 设它的概率密度为 $f(x, y),$ 由于<br>$$<br>F_{X}(x)=F(x, \infty)=\int_{-\infty}^{x}\left[\int_{-\infty}^{\infty} f(x, y) \mathrm{d} y\right] \mathrm{d} x<br>$$<br> $X$ 是一个连续型随机变量,且其概率密度为<br>$$<br>f_{X}(x)=\int_{-\infty}^{\infty} f(x, y) \mathrm{d} y<br>$$<br>同样,Y也是一个连续型随机变量,其概率密度为<br>$$<br>f_{Y}(y)=\int_{-\infty}^{\infty} f(x, y) \mathrm{d} x<br>$$<br>分别称 $f_{X}(x), f_{Y}(y)$ 为（ $X, Y$ ) <strong>关于 $X$ 和关于 $Y$ 的边缘概率密度.</strong></p>
+</li>
+</ul>
+<h2 id="3-3-条件分布"><a href="#3-3-条件分布" class="headerlink" title="3.3 条件分布"></a>3.3 条件分布</h2><ul>
+<li><strong>定义：</strong>设 $(X, Y)$ 是二维离散型随机变量,对于固定的 $j,$ 若 $P\left{Y=y_{j}\right}&gt;0$, 则称<br>$$<br>P\left{X=x_{i} \mid Y=y_{j}\right}=\frac{P\left{X=x_{i}, Y=y_{j}\right}}{P\left{Y=y_{j}\right}}=\frac{p_{i j}}{p \cdot j}, i=1,2, \cdots<br>$$<br>为在 $Y=y_{j}$ 条件下<strong>随机变量 $X$ 的条件分布律.</strong><br>同样,对于固定的 $i,$ 若 $P\left{X=x_{i}\right}&gt;0,$ 则称<br>$$<br>P\left{Y=y_{j} \mid X=x_{i}\right}=\frac{P\left{X=x_{i}, Y=y_{j}\right}}{P\left{X=x_{i}\right}}=\frac{p_{i j}}{p_{i}}, j=1,2, \cdots<br>$$<br>为在 $X=x_{i}$ 条件下随<strong>机变量 $Y$ 的条件分布律.</strong></li>
+</ul>
+<ul>
+<li><strong>定义：</strong>设二维随机变量 $(X, Y)$ 的概率密度为 $f(x, y),(X, Y)$ 关于 $Y$ 的边缘概率密度为 $f_{Y}(y) .$ 若对于固定的 $y, f_{Y}(y)&gt;0,$ 则称 $\frac{f(x, y)}{f_{Y}(y)}$ 为在 $Y=y$ 的条件<br>下 $X$ 的条件概率密度,记为：<br>$$<br>f_{X \mid Y}(x \mid y)=\frac{f(x, y)}{f_{Y}(y)}<br>$$<br>称 $\int_{-\infty}^{x} f_{X \mid Y}(x \mid y) \mathrm{d} x=\int_{-\infty}^{x} \frac{f(x, y)}{f_{Y}(y)} \mathrm{d} x$ 为在 $Y=y$ 的条件下 $X$ 的条件分布函数。记为 $P{X \leqslant x \mid Y=y}$ 或 $F_{X \mid Y}(x \mid y),$ 即</li>
+</ul>
+<p>$$<br>F_{X \mid Y}(x \mid y)=P{X \leqslant x \mid Y=y}=\int_{-\infty}^{x} \frac{f(x, y)}{f_{Y}(y)} \mathrm{d} x<br>$$<br>​        类似地,可以定义 $f_{Y \mid X}(y \mid x)=\frac{f(x, y)}{f_{X}(x)}$ 和 $F_{Y \mid X}(y \mid x)=\int_{-\infty}^{y} \frac{f(x, y)}{f_{X}(x)} \mathrm{d} y$<br>​        当 $\varepsilon$ 很小时,有<br>$$<br>P{X \leqslant x \mid y&lt;Y \leqslant y+\varepsilon} \approx \int_{-\infty}^{x} f_{X \mid Y}(x \mid y) \mathrm{d} x=F_{X \mid Y}(x \mid y)<br>$$</p>
+<h2 id="3-4-相互独立的随机变量"><a href="#3-4-相互独立的随机变量" class="headerlink" title="3.4 相互独立的随机变量"></a>3.4 相互独立的随机变量</h2><ul>
+<li><p><strong>定义：</strong>设 $F(x, y)$ 及 $F_{X}(x), F_{Y}(y)$ 分别是二维随机变量 $(X, Y)$ 的分布函数及边缘分布故数. 若对于所有 $x$, $y$ 有<br>$$<br>P\left{X\leqslant x, Y\leqslant y\right}=P\left{X \leqslant x\right} P\left{Y \leqslant y\right}<br>$$<br>即<br>$$<br>F(x, y)=F_{x}(x) F_{Y}(y)<br>$$<br>则称<strong>随机变量 $X$ 和 $Y$ 是相互独立的</strong>. </p>
+</li>
+<li><p>设 $(X, Y)$ 是<strong>连续型随机变量</strong>, $f(x, y), f_{X}(x), f_{Y}(y)$ 分别为 $(X, Y)$ 的概率密度和边缘概率密度,则 $X$ 和 $Y$ 相互独立的条件等价于 : 等式<br>$$<br>f(x, y)=f_{X}(x) f_{Y}(y)<br>$$<br>在平面上几乎处处成立.</p>
+</li>
+<li><p>当 $(X, Y)$ 是<strong>离散型随机变量</strong>时, $X$ 和 $Y$ 相互独立的条件式等价于 : 对于 $(X, Y)$ 的所有可能取的值 $\left(x_{i}, y_{j}\right)$ 有</p>
+</li>
+</ul>
+<p>$$<br>  P\left{X=x_{i}, Y=y_{j}\right}=P\left{X=x_{i}\right} P\left{Y=y_{j}\right}<br>$$</p>
+<ul>
+<li>对于二维正态随机变量$(X, Y), X $ 和  $Y$  相互独立的充要条件是参数 $\rho=0 .$</li>
+</ul>
+<ul>
+<li><p>推广到 $n$ 维随机变量的情况:</p>
+<ul>
+<li><p>$n$ 维随机变量 $\left(X_{1}, X_{2}, \cdots, X_{n}\right)$ 的<strong>分布函数</strong>定义为<br>$$<br>F\left(x_{1}, x_{2}, \cdots, x_{n}\right)=P\left{X_{1} \leqslant x_{1}, X_{2} \leqslant x_{2}, \cdots, X_{n} \leqslant x_{n}\right}<br>$$<br>其中 $x_{1}, x_{2}, \cdots, x_{n}$ 为任意实数.</p>
+</li>
+<li><p>若存在非负函数 $f\left(x_{1}, x_{2}, \cdots, x_{n}\right),$ 使对于任意实数 $x_{1}, x_{2}, \cdots, x_{n}$ 有<br>$$<br>\begin{array}{l}<br>F\left(x_{1}, x_{2}, \cdots, x_{n}\right)<br>=\int_{-\infty}^{x_{n}} \int_{-\infty}^{x_{n-1}} \cdots \int_{-\infty}^{x_{1}} f\left(x_{1}, x_{2}, \cdots, x_{n}\right) \mathrm{d} x_{1} \mathrm{d} x_{2} \cdots \mathrm{d} x_{n}<br>\end{array}<br>$$<br>则称 $f\left(x_{1}, x_{2}, \cdots, x_{n}\right)$ 为 $\left(X_{1}, X_{2}, \cdots, X_{n}\right)$ 的<strong>概率密度函数</strong>.</p>
+</li>
+<li><p>设 $\left(X_{1}, X_{2}, \cdots, X_{n}\right)$ 的分布函数 $F\left(x_{1}, x_{2}, \cdots, x_{n}\right)$ 为已知,则 $\left(X_{1}, X_{2}, \cdots, X_{n}\right)$的 $k(1 \leqslant k&lt;n)$ 维<strong>边缘分布函数</strong>就随之确定. 例如 $\left(X_{1}, X_{2}, \cdots, X_{n}\right)$ 关于 $X_{1}$ 、关于 $\left(X_{1}, X_{2}\right)$ 的边缘分布函数分别为<br>$$<br>\begin{array}{l}<br>F_{X_{1}}\left(x_{1}\right)=F\left(x_{1}, \infty, \infty, \cdots, \infty\right) \<br>F_{X_{1}, x_{2}}\left(x_{1}, x_{2}\right)=F\left(x_{1}, x_{2}, \infty, \infty, \cdots, \infty\right)<br>\end{array}<br>$$</p>
+</li>
+<li><p>若 $f\left(x_{1}, x_{2}, \cdots, x_{n}\right)$ 是 $\left(X_{1}, X_{2}, \cdots, X_{n}\right)$ 的概率密度,则 $\left(X_{1}, X_{2}, \cdots, X_{n}\right)$ 关于$X_{1}$ 关于 $\left(X_{1}, X_{2}\right)$ 的<strong>边缘概率密度</strong>分别为<br>$$<br>\begin{array}{l}<br>f_{X_{1}}\left(x_{1}\right)=\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \cdots \int_{-\infty}^{\infty} f\left(x_{1}, x_{2}, \cdots, x_{n}\right) \mathrm{d} x_{2} \mathrm{d} x_{3} \cdots \mathrm{d} x_{n} \<br>f_{X_{1}, x_{2}}\left(x_{1}, x_{2}\right)=\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \cdots \int_{-\infty}^{\infty} f\left(x_{1}, x_{2}, \cdots, x_{n}\right) \mathrm{d} x_{3} \mathrm{d} x_{4} \cdots \mathrm{d} x_{n}<br>\end{array}<br>$$</p>
+</li>
+<li><p>若对于所有的 $x_{1}, x_{2}, \cdots, x_{n}$ 有<br>$$<br>F\left(x_{1}, x_{2}, \cdots, x_{n}\right)=F_{X_{1}}\left(x_{1}\right) F_{X_{2}}\left(x_{2}\right) \cdots F_{X_{n}}\left(x_{n}\right)<br>$$<br><strong>则称 $X_{1}, X_{2}, \cdots, X_{n}$ 是相互独立的</strong>.</p>
+</li>
+<li><p>若对于所有的 $x_{1}, x_{2}, \cdots, x_{m} ; y_{1}, y_{2}, \cdots, y_{n}$ 有<br>$$<br>F\left(x_{1}, x_{2}, \cdots, x_{m}, y_{1}, y_{2}, \cdots, y_{n}\right)=F_{1}\left(x_{1}, x_{2}, \cdots, x_{m}\right) F_{2}\left(y_{1}, y_{2}, \cdots, y_{n}\right)<br>$$<br>其中 $F_{1}, F_{2}, F$ 依次为随机变量 $\left(X_{1}, X_{2}, \cdots, X_{m}\right),\left(Y_{1}, Y_{2}, \cdots, Y_{n}\right)$ 和 $\left(X_{1}, X_{2},\right.$$\left.\cdots, X_{m}, Y_{1}, Y_{2}, \cdots, Y_{n}\right)$ 的分布函数,则称随机变量 $\left(X_{1}, X_{2}, \cdots, X_{m}\right)$ 和 $\left(Y_{1}, Y_{2},\right.$$\cdots, Y_{n}$ ) 是相互独立的.</p>
+</li>
+<li><p><strong>定理：</strong>设 $\left(X_{1}, X_{2}, \cdots, X_{m}\right)$ 和 $\left(Y_{1}, Y_{2}, \cdots, Y_{n}\right)$ 相互独立, 则 $X_{i}(i=1,2, \cdots,$$m$ ) 和 $Y_{j}(j=1,2, \cdots, n)$ 相互独立. 又若 $h, g$ 是连续函数,则 $h\left(X_{1}, X_{2}, \cdots, X_{m}\right)$ 和 $g\left(Y_{1}, Y_{2}, \cdots, Y_{n}\right)$ 相互独立.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-5-两个随机变量的函数的分布"><a href="#3-5-两个随机变量的函数的分布" class="headerlink" title="3.5 两个随机变量的函数的分布"></a>3.5 两个随机变量的函数的分布</h2><ul>
+<li><p>$Z=X+Y$ 的分布<br>设 $(X, Y)$ 是二维连续型随机变量,它具有概率密度 $f(x, y) .$ 则 $Z=X+Y$ 仍为连续型随机变量,其<strong>概率密度</strong>为<br>$$<br>\begin{array}{l}<br>f_{X+Y}(z)=\int_{-\infty}^{\infty} f(z-y, y) \mathrm{d} y \<br>f_{X+Y}(z)=\int_{-\infty}^{\infty} f(x, z-x) \mathrm{d} x<br>\end{array}<br>$$<br>又若 $X$ 和 $Y$ <strong>相互独立,</strong> 设 $(X, Y)$ 关于 $X, Y$ 的边缘密度分别为 $f_{X}(x)$,$f_{Y}(y),$ 则分别化为<br>$$<br>f_{X+Y}(z)=\int_{-\infty}^{\infty} f_{X}(z-y) f_{Y}(y) \mathrm{d} y<br>$$<br>和<br>$$<br>f_{X+Y}(z)=\int_{-\infty}^{\infty} f_{X}(x) f_{Y}(z-x) \mathrm{d} x<br>$$<br>这两个公式称为 $f_{X}$ 和 $f_{Y}$ 的卷积公式,记为 $f_{X} * f_{Y}$, 即<br>$$<br>f_{X} * f_{Y}=\int_{-\infty}^{\infty} f_{X}(z-y) f_{Y}(y) \mathrm{d} y=\int_{-\infty}^{\infty} f_{X}(x) f_{Y}(z-x) \mathrm{d} x<br>$$</p>
+</li>
+<li><p>一般,设 $X, Y$ 相互独立且 $X \sim N\left(\mu_{1}, \sigma_{1}^{2}\right), Y \sim N\left(\mu_{2}, \sigma_{2}^{2}\right) .$ 知 $Z=X+Y$ 仍然服从正态分布,且有 $Z \sim N\left(\mu_{1}+\mu_{2}, \sigma_{1}^{2}+\sigma_{2}^{2}\right) .$</p>
+</li>
+<li><p>这个结论还能 推广到 $n$ 个独立正态随机变量之和的情况. 即若 $X_{i} \sim N\left(\mu_{i}, \sigma_{i}^{2}\right)(i=1,2, \cdots, n)$, 且它们相互独立,则它们的和 $Z=X_{1}+X_{2}+\cdots+X_{n}$ 仍然服从正态分布,且有 $Z \sim N\left(\mu_{1}+\mu_{2}+\cdots+\mu_{n}, \sigma_{1}^{2}+\sigma_{2}^{2}+\cdots+\sigma_{n}^{2}\right)$</p>
+</li>
+<li><p>更一般地,可以证明有限个相互独立的正态随机变量的线性组合仍然服从 正态分布.</p>
+</li>
+<li><p>$ Z=\frac{Y}{X} 、 Z=X Y $的分布<br>设 $(X, Y)$ 是二维连续型随机变量,它具有概率密度 $f(x, y),$ 则 $Z=\frac{Y}{X}$ 、$Z=X Y$ 仍为连续型随机变量,其概率密度分别为<br>$$<br>\begin{aligned}<br>f_{Y / X}(z) &amp;=\int_{-\infty}^{\infty}|x| f(x, x z) \mathrm{d} x \<br>f_{X Y}(z) &amp;=\int_{-\infty}^{\infty} \frac{1}{|x|} f\left(x, \frac{z}{x}\right) \mathrm{d} x<br>\end{aligned}<br>$$<br>又若 $X$ 和 $Y$ 相互独 立， 设 $(X, Y)$ 关于 $X, Y$ 的边缘密度分别为 $f_{X}(x),$$f_{Y}(y),$ 则<br>$$<br>f_{Y / X}(z)=\int_{-\infty}^{\infty}|x| f_{X}(x) f_{Y}(x z) \mathrm{d} x<br>$$<br>$$<br>f_{X Y}(z)=\int_{-\infty}^{\infty} \frac{1}{|x|} f_{X}(x) f_{Y}\left(\frac{z}{x}\right) \mathrm{d} x<br>$$</p>
+</li>
+<li><p>$M=\max {X, Y} \text { 及 } N=\min {X, Y}$的分布</p>
+<p>设 $X, Y$ 是两个相互独立的随机变量，它们的分布函数分别为 $F_{X}(x)$ 和$F_{Y}(y) .$ 现在来求 $M=\max {X, Y}$ 及 $N=\min {X, Y}$ 的分布函数.</p>
+<ul>
+<li>由于 $M=\max {X, Y}$ 不大于 $z$ 等价于 $X$ 和 $Y$ 都不大于 $z$, 故有</li>
+</ul>
+<p>$$<br>P{M \leqslant z}=P{X \leqslant z, Y \leqslant z}<br>$$<br>​    又由于 $X$ 和 $Y$ 相互独立,得到 $M=\max {X, Y}$ 的分布函数为<br>$$<br>F_{\max }(z)=P{M \leqslant z}=P{X \leqslant z, Y \leqslant z}=P{X \leqslant z} P{Y \leqslant z}<br>$$<br>​    即有 $F_{\max }(z)=F_{X}(z) F_{Y}(z)$</p>
+</li>
+</ul>
+<ul>
+<li><p>类似地, 可得 $N=\min {X, Y}$ 的分布函数为$F_{\min }(z)=P{N \leqslant z}=1-P{N&gt;z}$<br>即</p>
+<p>$$<br>\begin{array}{c}<br>=1-P{X&gt;z, Y&gt;z}=1-P{X&gt;z} \cdot P{Y&gt;z} \<br>F_{\min }(z)=1-\left[1-F_{X}(z)\right]\left[1-F_{Y}(z)\right]<br>\end{array}<br>$$</p>
+</li>
+</ul>
+<ul>
+<li><p>以上结果容易推广到 $n$ 个相互独立的随机变量的情况. 设 $X_{1}, X_{2}, \cdots, X_{n}$ 是 $n$ 个相互独立的随机变量. 它们的分布函数分别为 $F_{x_{i}}\left(x_{i}\right)(i=1,2, \cdots, n),$ 则 $M=\max \left{X_{1}, X_{2}, \cdots, X_{n}\right}$ 及 $N=\min \left{X_{1}, X_{2}, \cdots, X_{n}\right}$ 的分布函数分别为</p>
+<p>$$<br>\begin{array}{c}<br>F_{\max }(z)=F_{X_{1}}(z) F_{X_{2}}(z) \cdots F_{X_{n}}(z) \<br>F_{\min }(z)=1-\left[1-F_{X_{1}}(z)\right]\left[1-F_{X_{2}}(z)\right] \cdots\left[1-F_{X_{n}}(z)\right]<br>\end{array}<br>$$</p>
+</li>
+<li><p>特别, 当 $X_{1}, X_{2}, \cdots, X_{n}$ 相互独立且具有相同分布函数 $F(x)$ 时有</p>
+<p>$$<br>F_{\max }(z)=[F(z)]^{n}<br>$$<br>$$<br>F_{\min }(z)=1-[1-F(z)]^{n}<br>$$</p>
+</li>
+</ul>
+<h1 id="第四章-随机变量的数字特征"><a href="#第四章-随机变量的数字特征" class="headerlink" title="第四章 随机变量的数字特征"></a>第四章 随机变量的数字特征</h1><h2 id="4-1-数学期望"><a href="#4-1-数学期望" class="headerlink" title="4.1 数学期望"></a>4.1 数学期望</h2><ul>
+<li><p><strong>定义：</strong></p>
+<p>设<strong>离散型随机变量</strong> $X$ 的分布律为<br>$$<br>P\left{X=x_{k}\right}=p_{k}, \quad k=1,2, \cdots<br>$$<br>若级数<br>$$<br>\sum_{k=1}^{\infty} x_{k} p_{k}<br>$$<br>绝对收致,则称级数 $\sum_{k=1}^{\infty} x_{k} p_{k}$ 的和为随机变量 $X$ 的<strong>数学期望</strong>,记为 $E(X) .$ 即<br>$$<br>E(X)=\sum_{k=1}^{\infty} x_{k} p_{k}<br>$$<br>设<strong>连续型随机变量</strong> $X$ 的概率密度为 $f(x)$,若积分<br>$$<br>\int_{-\infty}^{\infty} x f(x) \mathrm{d} x<br>$$<br>绝对收敛,则称积分 $\int_{-\infty}^{\infty} x f(x) \mathrm{d} x$ 的值为随机变量 $X$ 的<strong>数学期望</strong>,记为 $E(X) .$<br>即<br>$$<br>E(X)=\int_{-\infty}^{\infty} x f(x) \mathrm{d} x<br>$$<br><strong>数学期望简称期望,又称为均值</strong>. 数学期望 $E(X)$ 完全由<strong>随机变量 $X$ 的概率分布</strong>所确定 . 若 $X$ 服从某一分布,也称 $E(X)$ 是这一分布的数学期望 $.$</p>
+</li>
+<li><p><strong>定理：</strong>设 $Y$ 是随机变量 $X$ 的函数 $: Y=g(X)(g$ 是连续函数).<br>(i) 如果 $X$ 是离散型随机变量,它的分布律为 $P\left{X=x_{k}\right}=p_{k}, k=1,2, \cdots,$若 $\sum_{k=1}^{\infty} g\left(x_{k}\right) p_{k}$ 绝对收敛,则有<br>$$<br>E(Y)=E[g(X)]=\sum_{k=1}^{\infty} g\left(x_{k}\right) p_{k}<br>$$<br>(ii) 如果 $X$ 是连续型随机变量,它的概率密度为 $f(x),$ 若 $\int_{-\infty}^{\infty} g(x) f(x) \mathrm{d} x$ 绝对收敛,则有<br>$$<br>E(Y)=E[g(X)]=\int_{-\infty}^{\infty} g(x) f(x) \mathrm{d} x<br>$$<br>定理的重要意义在于当我们求 $E(Y)$ 时,不必算出 $Y$ 的分布律或概率密度，而只需利用 $X$ 的分布律或概率密度就可以了</p>
+</li>
+<li><p>上述定理还可以推广到两个或两个以上随机变量的函数的情况.<br>例如,设 $Z$ 是随机变量 $X, Y$ 的函数 $Z=g(X, Y)(g$ 是连续函数),那么, $Z$ 是一个一维随机变量.</p>
+<ul>
+<li>若二维随机变量( $X, Y)$ 的概率密度为 $f(x, y),$ 则有</li>
+</ul>
+<p>$$<br>E(Z)=E[g(X, Y)]=\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} g(x, y) f(x, y) \mathrm{d} x \mathrm{~d} y<br>$$<br>​        这里设上式右边的积分绝对收敛.</p>
+<ul>
+<li>又若( $X, Y$ ) 为离散型随机变量,其分布律为<br>$P\left{X=x_{i}, Y=y_{i}\right}=p_{i j}, i, j=1,2, \cdots,$ 则有<br>$$<br>E(Z)=E[g(X, Y)]=\sum_{j=1}^{\infty} \sum_{i=1}^{\infty} g\left(x_{i}, y_{j}\right) p_{i j}<br>$$<br>这里设上式右边的级数绝对收敛.</li>
+</ul>
+</li>
+<li><p>数学期望的几个重要性质(以下设所遇到的随机变量的数学期望存在).<br>$1^{\circ}$ 设 $C$ 是常数 $,$ 则有 $E(C)=C .$<br>$2^{\circ}$ 设 $X$ 是一个随机变量, $C$ 是常数,则有<br>$$<br>E(C X)=C E(X)<br>$$<br>$3^{\circ}$ 设 $X, Y$ 是两个随机变量,则有<br>$$<br>E(X+Y)=E(X)+E(Y)<br>$$<br>这一性质可以推广到任意有限个随机变量之和的情况.</p>
+<p> $4^{\circ}$ 设 $X, Y$ 是相互独立的随机变量,则有<br>$$<br>E(X Y)=E(X) E(Y)<br>$$</p>
+</li>
+</ul>
+<h2 id="4-2-方差"><a href="#4-2-方差" class="headerlink" title="4.2 方差"></a>4.2 方差</h2><ul>
+<li><p><strong>定义：</strong>设 $X$ 是一个随机变量,若 $E\left{[X-E(X)]^{2}\right}$ 存往, 则称 $E{[X-$$\left.E(X)]^{2}\right}$ 为 $X$ 的方差,记为 $D(X)$ 或 $\operatorname{Var}(X),$ 即<br>$$<br>D(X)=\operatorname{Var}(X)=E\left{[X-E(X)]^{2}\right}<br>$$<br>在应用上还引人量 $\sqrt{D(X)},$ 记为 $\sigma(X),$ 称为标准差或均方差.</p>
+</li>
+<li><p>由定义知,方差实际上就是随机变量 $X$ 的 函数 $g(X)=(X-E(X))^{2}$ 的数学期望. </p>
+<ul>
+<li>于是对于离散型随机变量,有</li>
+</ul>
+<p>$$<br>D(X)=\sum_{k=1}^{\infty}\left[x_{k}-E(X)\right]^{2} p_{k}<br>$$<br>其中 $P\left{X=x_{k}\right}=p_{k}, k=1,2, \cdots$ 是 $X$ 的分布律.</p>
+<ul>
+<li>对于连续型随机变盟,有</li>
+</ul>
+<p>$$<br>D(X)=\int_{-\infty}^{\infty}[x-E(X)]^{2} f(x) \mathrm{d} x<br>$$<br>其中 $f(x)$ 是 $X$ 的概率密度.</p>
+</li>
+</ul>
+<ul>
+<li>随机变量 $X$ 的方差可按下列公式计算.</li>
+</ul>
+<p>$$<br>D(X)=E\left(X^{2}\right)-[E(X)]^{2}<br>$$</p>
+<ul>
+<li>随机变量 $X$ 具有数学期望 $E(X)=\mu,$ 方差 $D(X)=\sigma^{2} \neq 0 .$ 记<br>$$<br>X^{<em>}=\frac{X-\mu}{\sigma}<br>$$<br>则<br>$$<br>\begin{array}{c}<br>E\left(X^{</em>}\right)=\frac{1}{\sigma} E(X-\mu)=\frac{1}{\sigma}[E(X)-\mu]=0 \<br>D\left(X^{<em>}\right)=E\left(X^{</em> 2}\right)-\left[E\left(X^{<em>}\right)\right]^{2}=E\left[\left(\frac{X-\mu}{\sigma}\right)^{2}\right] \<br>=\frac{1}{\sigma^{2}} E\left[(X-\mu)^{2}\right]=\frac{\sigma^{2}}{\sigma^{2}}=1<br>\end{array}<br>$$<br>即 $X^{</em>}=\frac{X-\mu}{\sigma}$ 的数学期望为 $0,$ 方差为 $1 . X^{*}$ 称为 $X$ 的<strong>标准化变量.</strong></li>
+</ul>
+<ul>
+<li>设随机变量 $X$ 具有(0一1)分布,其分布律为</li>
+</ul>
+<p>$$<br>  P{X=0}=1-p, \quad P{X=1}=p<br>$$<br>       $D(X)$：</p>
+<p>$$<br>\begin{array}{l}<br>  E(X)=0 \cdot(1-p)+1 \cdot p=p \<br>  E\left(X^{2}\right)=0^{2} \cdot(1-p)+1^{2} \cdot p=p<br>  \end{array}<br>$$<br>$$<br>D(X)=E\left(X^{2}\right)-[E(X)]^{2}=p-p^{2}=p(1-p)<br>$$</p>
+<ul>
+<li>随机变量 $X \sim \pi(\lambda),$ 求 $D(X) .$<br>随机变量 $X$ 的分布律为<br>$$<br>P{X=k}=\frac{\lambda^{k} \mathrm{e}^{-\lambda}}{k !}, \quad k=0,1,2, \cdots, \quad \lambda&gt;0<br>$$<br>得 $E(X)=\lambda,$ 而<br>$$<br>\begin{aligned}<br>E\left(X^{2}\right) &amp;=E[X(X-1)+X]=E[X(X-1)]+E(X) \<br>&amp;=\sum_{k=0}^{\infty} k(k-1) \frac{\lambda^{k} \mathrm{e}^{-\lambda}}{k !}+\lambda=\lambda^{2} \mathrm{e}^{-\lambda} \sum_{k=2}^{\infty} \frac{\lambda^{k-2}}{(k-2) !}+\lambda \<br>&amp;=\lambda^{2} \mathrm{e}^{-\lambda} \mathrm{e}^{\lambda}+\lambda=\lambda^{2}+\lambda<br>\end{aligned}<br>$$<br>所以方差<br>$$<br>D(X)=E\left(X^{2}\right)-[E(X)]^{2}=\lambda<br>$$<br>由此可知,<strong>泊松分布的数学期望与方差相等,都等于参数 $\lambda .$</strong> 因为泊松分布只含 一个参数 $\lambda,$ 只要知道它的数学期望或方差就能完全确定它的分布了。</li>
+</ul>
+<ul>
+<li><p>随机变量 $X \sim U(a, b),$  $D(X)$.<br>概率密度为<br>$$<br>f(x)=\left{\begin{array}{ll}<br>\frac{1}{b-a}, &amp; a&lt;x&lt;b \<br>0, &amp; \text { 其他. }<br>\end{array}\right.<br>$$<br> $E(X)=\frac{a+b}{2} .$ 方差为<br>$$<br>\begin{aligned}<br>D(X) &amp;=E\left(X^{2}\right)-[E(X)]^{2} \<br>&amp;=\int_{a}^{b} x^{2} \frac{1}{b-a} \mathrm{~d} x-\left(\frac{a+b}{2}\right)^{2}=\frac{(b-a)^{2}}{12}<br>\end{aligned}<br>$$</p>
+</li>
+<li><p>随机变量 X 服从指数分布，其概率密度为<br>$$<br>f(x)=\left{\begin{array}{ll}<br>\frac{1}{\theta} \mathrm{e}^{-x / \theta}, &amp; x&gt;0 \<br>0, &amp; x \leqslant 0<br>\end{array}\right.<br>$$<br>其中 $\theta&gt;0,$ 求 $E(X), D(X)$.<br>$$<br>\begin{aligned}<br>E(X) &amp;=\int_{-\infty}^{\infty} x f(x) \mathrm{d} x=\int_{0}^{\infty} x \frac{1}{\theta} \mathrm{e}^{-x / \theta} \mathrm{d} x \<br>&amp;=-\left.x \mathrm{e}^{-x / \theta}\right|<em>{0} ^{\infty}+\int</em>{0}^{\infty} \mathrm{e}^{-x / \theta} \mathrm{d} x=\theta \<br>E\left(X^{2}\right) &amp;=\int_{-\infty}^{\infty} x^{2} f(x) \mathrm{d} x=\int_{0}^{\infty} x^{2} \frac{1}{\theta} \mathrm{e}^{-x / \theta} \mathrm{d} x \<br>&amp;=-\left.x^{2} \mathrm{e}^{-x / \theta}\right|<em>{0} ^{\infty}+\int</em>{0}^{\infty} 2 x \mathrm{e}^{-x / \theta} \mathrm{d} x=2 \theta^{2}<br>\end{aligned}<br>$$<br>于是 $\quad D(X)=E\left(X^{2}\right)-[E(X)]^{2}=2 \theta^{2}-\theta^{2}=\theta^{2} .$</p>
+</li>
+</ul>
+<p>即有<br>$$<br>E(X)=\theta, \quad D(X)=\theta^{2}<br>$$</p>
+<ul>
+<li>现在来证明方差的几个重要性质(以下设所遇到的随机变量其方差存在).<br>$1^{\circ} \quad$ 设 $C$ 是常数,则 $D(C)=0 .$<br>$2^{\circ} \quad$ 设 $X$ 是随机变量, $C$ 是常数,则有</li>
+</ul>
+<p>$$<br>D(C X)=C^{2} D(X), \quad D(X+C)=D(X)<br>$$<br>​        $3^{\circ} \quad$ 设 $X, Y$ 是两个随机变量,则有<br>$$<br>D(X+Y)=D(X)+D(Y)+2 E{(X-E(X))(Y-E(Y))}<br>$$<br>​        特别,若 $X, Y$ 相互独立,则有<br>$$<br>D(X+Y)=D(X)+D(Y)<br>$$<br>​        这一性质可以推广到任意有限多个相互独立的随机变量之和的情况.<br>​        $4^{\circ} \quad D(X)=0$ 的充要条件是 $X$ 以概率 1 取常数 $E(X),$ 即<br>$$<br>P{X=E(X)}=1<br>$$</p>
+<ul>
+<li><p>设随机变量  $X \sim b(n, p) : $$E(X)=n p, \quad D(X)=n p(1-p)$</p>
+</li>
+<li><p>设随机变量 $X \sim N\left(\mu, \sigma^{2}\right),$<br>$$<br>\begin{array}{l}<br>E(X)=E(\mu+\sigma Z)=\mu \<br>D(X)=D(\mu+\sigma Z)=D(\sigma Z)=\sigma^{2} D(Z)=\sigma^{2}<br>\end{array}<br>$$<br>正态分布的概率密度中的两个参数 $\mu$ 和 $\sigma$ 分别就是该分布的数学期 望和均方差,因而正态分布完全可由它的数学期望和方差所确定.</p>
+</li>
+<li><p>若 $X_{i} \sim N\left(\mu_{i}, \sigma_{i}^{2}\right), i=1,2, \cdots, n,$ 且它们相 互独立,则它们的线性组合: $C_{1} X_{1}+C_{2} X_{2}+\cdots+C_{n} X_{n} \quad\left(C_{1}, C_{2}, \cdots, C_{n}\right.$ 是不全为0 的常数 )仍然服从正态分布,于是由数学期望和方差的性质知道</p>
+</li>
+</ul>
+<p>$$<br>C_{1} X_{1}+C_{2} X_{2}+\cdots+C_{n} X_{n} \sim N\left(\sum_{i=1}^{n} C_{i} \mu_{i}, \sum_{i=1}^{n} C_{i}^{2} \sigma_{i}^{2}\right)<br>$$</p>
+<ul>
+<li><p><strong>定理：</strong>设随机变量 $X$ 具有数学期望 $E(X)=\mu,$ 方差 $D(X)=\sigma^{2},$ 则对于任 意正数 $\varepsilon,$ 不等式<br>$$<br>P{|X-\mu| \geqslant \varepsilon} \leqslant \frac{\sigma^{2}}{\varepsilon^{2}}<br>$$<br>这一不等式称为切比雪夫(Chebyshev)不等式.</p>
+<p>切比雪夫不等式也可以写成如下的形式:<br>$$<br>P{|X-\mu|&lt;\varepsilon} \geqslant 1-\frac{\sigma^{2}}{\varepsilon^{2}}<br>$$</p>
+</li>
+</ul>
+<h2 id="4-3-协方差与相关系数"><a href="#4-3-协方差与相关系数" class="headerlink" title="4.3 协方差与相关系数"></a>4.3 协方差与相关系数</h2><ul>
+<li><p>这意味着当 $E{[X-E(X)][Y-E(Y)]} \neq 0$ 时 $, X$ 与 $Y$ 不相互独立,而是存在 着一定的关系的.<br><strong>定义：</strong>量 $E{[X-E(X)][Y-E(Y)]}$ 称为随机变量 $X$ 与 $Y$ 的协方差. 记 为 $\operatorname{Cov}(X, Y),$ 即<br>$$<br>\operatorname{Cov}(X, Y)=E{[X-E(X)][Y-E(Y)]}<br>$$<br>而<br>$$<br>\rho_{X Y}=\frac{\operatorname{Cov}(X, Y)}{\sqrt{D(X)} \sqrt{D(Y)}}<br>$$<br>称为随机变量 $X$ 与 $Y$ 的<strong>相关系数</strong>.</p>
+</li>
+<li><p>$$<br>\operatorname{Cov}(X, Y)=\operatorname{Cov}(Y, X), \quad \operatorname{Cov}(X, X)=D(X)<br>$$</p>
+</li>
+<li><p>$$<br>D(X+Y)=D(X)+D(Y)+2 \operatorname{Cov}(X, Y)<br>$$<br>将 $\operatorname{Cov}(X, Y)$ 的定义式展开，易得<br>$$<br>\operatorname{Cov}(X, Y)=E(X Y)-E(X) E(Y)<br>$$</p>
+</li>
+<li><p>协方差具有下述性质 :<br>$1^{\circ} \operatorname{Cov}(a X, b Y)=a b \operatorname{Cov}(X, Y), a, b$ 是常数.</p>
+<p>$2^{\circ} \operatorname{Cov}\left(X_{1}+X_{2}, Y\right)=\operatorname{Cov}\left(X_{1}, Y\right)+\operatorname{Cov}\left(X_{2}, Y\right)$</p>
+</li>
+<li><p>定理：<br>$\begin{array}{l}<br>\ 1^{\circ}\left|\rho_{X Y}\right| \leqslant 1 . \<br>\ 2^{\circ}\left|\rho_{X Y}\right|=1 \text { 的充要条件是,存在常数 } a, b \text { 使 } P{Y=a+b X}=1<br>\end{array}<br>$</p>
+</li>
+<li><p>均方误差 $e$ 是 $\left|\rho_{X Y}\right|$ 的严格单调减少函数,</p>
+</li>
+<li><p>$\rho_{X Y}$ 是一 个可以用来表征 $X, Y$ 之间线性关系紧密程度的量. 当 $\left|\rho_{X Y}\right|$ 较大时，我们通常说 $X, Y$ 线性相关的程度较好 $;$ 当 $\left|\rho_{X Y}\right|$ 较小时,我们说 $, X, Y$ 线性相关的程度较差. 当 $\rho_{X Y}=0$ 时,称 $X$ 和 $Y$ 不相关.</p>
+</li>
+<li><p>假设随机变量 $X, Y$ 的相关系数 $\rho_{X Y}$ 存在. 当 $X$ 和 $Y$ 相互独立时,$X, Y$ 不相关. 反之,若 $X, Y$ 不相关, $X$ 和 $Y$ 却不一定相互独立. 上述情况,从“不相关”和“相互独立”的含义来看是明显的. 这是因为不相关只是就线性关系来说的,而相互独立是就一般关系而言的.</p>
+</li>
+</ul>
+<h2 id="4-4-矩、协方差矩阵"><a href="#4-4-矩、协方差矩阵" class="headerlink" title="4.4 矩、协方差矩阵"></a>4.4 矩、协方差矩阵</h2><ul>
+<li><p><strong>定义：</strong><br>设 $X$ 和 $Y$ 是随机变量,若$E\left(X^{k}\right), \quad k=1,2, \cdots$存在,称它为 $X$ 的 <strong>$k$ 阶原点矩</strong>,简称 $k$ 阶矩.<br>若$E\left{[X-E(X)]^{k}\right}, k=2,3, \cdots$存在,称它为 $X$ 的 <strong>$k$ 阶中心矩</strong>.<br>若$E\left(X^{k} Y^{\prime}\right), \quad k, l=1,2, \cdots$存在,称它为 $X$ 和 $Y$ 的 $k+l$ 阶混合矩.<br>若$E\left{[X-E(X)]^{k}[Y-E(Y)]^{\prime}\right}, \quad k, l=1,2, \cdots$存在,称它为 $X$ 和 $Y$ 的 <strong>$k+l$ 阶混合中心矩</strong>.</p>
+</li>
+<li><p>$X$ 的数学期望 $E(X)$ 是 $X$ 的一阶原点矩,方差 $D(X)$ 是 $X$ 的二阶中心矩,协方差 $\operatorname{Cov}(X, Y)$ 是 $X$ 和 $Y$ 的二阶混合中心矩.</p>
+</li>
+<li><p>二维随机变量 $\left(X_{1}, X_{2}\right)$ 有四个二阶中心矩 (设它们都存在),分别记为：<br>$$<br>\begin{aligned}<br>c_{11} &amp;=E\left{\left[X_{1}-E\left(X_{1}\right)\right]^{2}\right} \<br>c_{12} &amp;=E\left{\left[X_{1}-E\left(X_{1}\right)\right]\left[X_{2}-E\left(X_{2}\right)\right]\right} \<br>c_{21} &amp;=E\left{\left[X_{2}-E\left(X_{2}\right)\right]\left[X_{1}-E\left(X_{1}\right)\right]\right} \<br>c_{22} &amp;=E\left{\left[X_{2}-E\left(X_{2}\right)\right]^{2}\right}<br>\end{aligned}<br>$$<br>将它们排成矩阵的形式<br>$$<br>\left(\begin{array}{ll}<br>c_{11} &amp; c_{12} \<br>c_{21} &amp; c_{22}<br>\end{array}\right)<br>$$<br>这个矩阵称为随机变量 $\left(X_{1}, X_{2}\right)$ 的协方差矩阵. </p>
+</li>
+<li><p>设 $n$ 维随机变量 $\left(X_{1}, X_{2}, \cdots, X_{n}\right)$ 的二阶混合中心矩<br>$$<br>c_{i j}=\operatorname{Cov}\left(X_{i}, X_{j}\right)=E\left{\left[X_{i}-E\left(X_{i}\right)\right]\left[X_{j}-E\left(X_{j}\right)\right]\right}, i, j=1,2, \cdots, n<br>$$<br>都存在,则称矩阵<br>$$<br>\boldsymbol{C}=\left(\begin{array}{cccc}<br>c_{11} &amp; c_{12} &amp; \cdots &amp; c_{1 n} \<br>c_{21} &amp; c_{22} &amp; \cdots &amp; c_{2 n} \<br>\vdots &amp; \vdots &amp; &amp; \vdots \<br>c_{n 1} &amp; c_{n 2} &amp; \cdots &amp; c_{m}<br>\end{array}\right)<br>$$<br>为 $n$ 维随机变量 $\left(X_{1}, X_{2}, \cdots, X_{n}\right)$ 的协方差矩阵. 由于 $c_{i j}=c_{j i} \quad(i \neq j ; i, j=1$, $2, \cdots, n),$ 因而上述矩阵是一个对称矩阵.</p>
+</li>
+<li><p>$n$ 维正态随机变量 $\left(X_{1}, X_{2}, \cdots, X_{n}\right)$ 的情况.<br>引入列矩阵<br>$$<br>\boldsymbol{X}=\left(\begin{array}{c}<br>x_{1} \<br>x_{2} \<br>\vdots \<br>x_{n}<br>\end{array}\right) \text { 和 } \boldsymbol{\mu}=\left(\begin{array}{c}<br>\mu_{1} \<br>\mu_{2} \<br>\vdots \<br>\mu_{n}<br>\end{array}\right)=\left(\begin{array}{c}<br>E\left(X_{1}\right) \<br>E\left(X_{2}\right) \<br>\vdots \<br>E\left(X_{n}\right)<br>\end{array}\right) .<br>$$<br>$n$ 维正态随机变量 $\left(X_{1}, X_{2}, \cdots, X_{n}\right)$ 的概率密度定义为<br>$$<br>\begin{array}{l}<br>f\left(x_{1}, x_{2}, \cdots, x_{n}\right)=\frac{1}{(2 \pi)^{n / 2}(\operatorname{det} \boldsymbol{C})^{1 / 2}} \exp \left{-\frac{1}{2}(\boldsymbol{X}-\boldsymbol{\mu})^{\mathrm{T}} \boldsymbol{C}^{-1}(\boldsymbol{X}-\boldsymbol{\mu})\right}<br>\end{array}<br>$$<br>其中 $\boldsymbol{C}$ 是 $\left(X_{1}, X_{2}, \cdots, X_{n}\right)$ 的协方差矩阵.</p>
+</li>
+</ul>
+<p>$n$ 维正态随机变量具有以下<strong>四条重要性质</strong> :</p>
+<ul>
+<li><p>$n$ 维正态随机变量 $\left(X_{1}, X_{2}, \cdots, X_{n}\right)$ 的每一个分量 $X_{i}, i=1,2, \cdots, n$ 都是<br>  正态随机变量;反之,若 $X_{1}, X_{2}, \cdots, X_{n}$ 都是正态随机变量,且相互独立,则 $\left(X_{1},\right.$ $\left.X_{2}, \cdots, X_{n}\right)$ 是 $n$ 维正态随机变量.</p>
+</li>
+<li><p>$n$ 维随机变量 $\left(X_{1}, X_{2}, \cdots, X_{n}\right)$ 服从 $n$ 维正态分布的充要条件是 $X_{1},$ $X_{2}, \cdots, X_{n}$ 的任意的线性组合</p>
+</li>
+</ul>
+<p>$$<br>l_{1} X_{1}+l_{2} X_{2}+\cdots+l_{n} X_{n}<br>$$<br>​        服从一维正态分布(其中 $l_{1}, l_{2}, \cdots, l_{n}$ 不全为零).</p>
+<ul>
+<li>若 $\left(X_{1}, X_{2}, \cdots, X_{n}\right)$ 服从 $n$ 维正态分布,设 $Y_{1}, Y_{2}, \cdots, Y_{k}$ 是 $X_{j} \quad(j=1$,$2, \cdots, n)$ 的线性函数,则 $\left(Y_{1}, Y_{2}, \cdots, Y_{k}\right)$ 也服从多维正态分布.  这一性质称为正态变量的线性变换不变性.</li>
+<li>设 $\left(X_{1}, X_{2}, \cdots, X_{n}\right)$ 服从 $n$ 维正态分布, $,$ 则 $^{\prime \prime} X_{1}, X_{2}, \cdots, X_{n}$ 相互独立”与$” X_{1}, X_{2}, \cdots, X_{n}$ 两两不相关”是等价的.$n$ 维正态分布在随机过程和数理统计中常会遇到.</li>
+</ul>
+<h1 id="第五章-大数定理及中心极限定理"><a href="#第五章-大数定理及中心极限定理" class="headerlink" title="第五章 大数定理及中心极限定理"></a>第五章 大数定理及中心极限定理</h1><h2 id="5-1-大数定律"><a href="#5-1-大数定律" class="headerlink" title="5.1 大数定律"></a>5.1 大数定律</h2><ul>
+<li><strong>弱大数定理（辛钦大数定理）</strong>：若 $\left(X_{1}, X_{2}, \cdots, X_{n}\right)$ 相互独立，服从同一分布的随机变量序列,且具有数学期望 $E\left(X_{k}\right)=\mu(k=1,2, \cdots) .$ 作前 $n$ 个变量的算术平均 $\frac{1}{n} \sum_{k=1}^{n} X_{k},$ 则对于任意 $\varepsilon&gt;0,$ 有</li>
+</ul>
+<p>$$<br>\lim <em>{n \rightarrow \infty} P\left\langle\left|\frac{1}{n} \sum</em>{k=1}^{n} X_{k}-\mu\right|&lt;\varepsilon\right}=1<br>$$</p>
+<ul>
+<li><p>设 $Y_{1}, Y_{2}, \cdots, Y_{n}, \cdots$ 是一个随机变量序列 $, a$ 是一个常数. 若对于任意正数$\varepsilon,$ 有<br>$$<br>\lim <em>{n \rightarrow \infty} P\left{\left|Y</em>{n}-a\right|&lt;\varepsilon\right}=1<br>$$<br>则称序列 $Y_{1}, Y_{2}, \cdots, Y_{n}, \cdots$ 依概率收敘于 $a,$ 记为<br>$$<br>Y_{n} \stackrel{P}{\longrightarrow} a<br>$$<br>依概率收敘的序列有以下的性质. 设 $X_{n} \stackrel{P}{\longrightarrow} a, Y_{n} \stackrel{P}{\longrightarrow} b,$ 又设函数 $g(x, y)$ 在点 $(a, b)$ 连续,则<br>$$<br>g\left(X_{n}, Y_{n}\right) \stackrel{P}{\longrightarrow} g(a, b)<br>$$</p>
+</li>
+<li><p>弱大数定理（辛钦大数定理） 设随机变量 $X_{1}, X_{2}, \cdots, X_{n}, \cdots$ 相互独立,服从同一分布且具有数学期望 $E\left(X_{k}\right)=\mu(k=1,2, \cdots),$ 则序列 $\bar{X}=\frac{1}{n} \sum_{k=1}^{n} X_{k}$ 依概率收签于 $\mu,$ 即 $\bar{X} \stackrel{P}{\longrightarrow} \mu$</p>
+</li>
+<li><p>辛钦大数定理的一个重要推论.<br><strong>伯努利大数定理：</strong>设 $f_{A}$ 是 $n$ 次独立重复试验中事件 $A$ 发生的次数, $p$ 是 事件 $A$ 在每次试验中发生的概率,则对于任意正数 $\varepsilon&gt;0,$ 有<br>$$<br>\lim <em>{n \rightarrow \infty} P\left{\left|\frac{f</em>{A}}{n}-p\right|&lt;\varepsilon\right}=1<br>$$<br>或<br>$$<br>\lim <em>{n \rightarrow \infty} P\left{\left|\frac{f</em>{A}}{n}-p\right| \geqslant \varepsilon\right}=0<br>$$</p>
+</li>
+</ul>
+<h2 id="5-2-中心极限定理"><a href="#5-2-中心极限定理" class="headerlink" title="5.2 中心极限定理"></a>5.2 中心极限定理</h2><ul>
+<li><p>三个常用的中心极限定理.</p>
+</li>
+<li><p><strong>定理一(独立同分布的中心极限定理)：</strong>设随机变量 $X_{1}, X_{2}, \cdots, X_{n}, \cdots$ 相互独立,服从同一分布,且具有数学期望和方差 $: E\left(X_{k}\right)=\mu, D\left(X_{k}\right)=\sigma^{2}&gt;0(k=$<br>$1,2, \cdots),$ 则随机变量之和 $\sum_{k=1}^{n} X_{k}$ 的标准化变量<br>$$<br>Y_{n}=\frac{\sum_{k=1}^{n} X_{k}-E\left(\sum_{k=1}^{n} X_{k}\right)}{\sqrt{D\left(\sum_{k=1}^{n} X_{k}\right)}}=\frac{\sum_{k=1}^{n} X_{k}-n \mu}{\sqrt{n} \sigma}<br>$$<br>的分布函数 $F_{n}(x)$ 对于任意 $x$ 满足<br>$$<br>\begin{aligned}<br>\lim <em>{n \rightarrow \infty} F</em>{n}(x) &amp;=\lim <em>{n \rightarrow \infty} P\left{\frac{\sum</em>{k=1}^{n} X_{k}-n \mu}{\sqrt{n} \sigma} \leqslant x\right} \<br>&amp;=\int_{-\infty}^{x} \frac{1}{\sqrt{2 \pi}} \mathrm{e}^{-t^{2} / 2} \mathrm{~d} t=\Phi(x)<br>\end{aligned}<br>$$<br>这就是说,均值为 $\mu,$ 方差为 $\sigma^{2}&gt;0$ 的独立同分布的随机变量 $X_{1}, X_{2}, \cdots, X_{n}$之和 $\sum_{k=1}^{n} X_{k}$ 的标准化变量,当 $n$ 充分大时,有<br>$$<br>\frac{\sum_{k=1}^{n} X_{k}-n \mu}{\sqrt{n} \sigma}={N(0,1)}<br>$$</p>
+</li>
+</ul>
+<p>这是独立同分布中心极限定理结果的另一个形式 . 这就是说,均值为 $\mu,$ 方差为$\sigma^{2}&gt;0$ 的独立同分布的随机变量 $X_{1}, X_{2}, \cdots, X_{n}$ 的算术平均 $\bar{X}=\frac{1}{n} \sum_{k=1}^{n} X_{k},$<br>  充分大时近似地服从均值为 $\mu,$ 方差为 $\sigma^{2} / n$ 的正态分布. 这一结果是数理统计 中大样本统计推断的基础.</p>
+<ul>
+<li><p><strong>定理二 (李雅普诺夫(Lyapunov)定理)</strong></p>
+<p>设随机变量 $X_{1}, X_{2}, \cdots, X_{n}, \cdots$ 相互独立，它们具有数学期望和方差<br>$$<br>E\left(X_{k}\right)=\mu_{k}, \quad D\left(X_{k}\right)=\sigma_{k}^{2}&gt;0, k=1,2, \cdots<br>$$<br>记<br>$$<br>B_{n}^{2}=\sum_{k=1}^{n} \sigma_{k}^{2}<br>$$<br>若存在正数 $\delta,$ 使得当 $n \rightarrow \infty$ 时，<br>$$<br>\frac{1}{B_{n}^{2+\delta}} \sum_{k=1}^{n} E\left{\left|X_{k}-\mu_{k}\right|^{2+\delta}\right} \rightarrow 0<br>$$<br>则随机变量之和 $\sum_{k=1}^{n} X_{k}$ 的标准化变量<br>$$<br>Z_{n}=\frac{\sum_{k=1}^{n} X_{k}-E\left(\sum_{k=1}^{n} X_{k}\right)}{\sqrt{D\left(\sum_{k=1}^{n} X_{k}\right)}}=\frac{\sum_{k=1}^{n} X_{k}-\sum_{k=1}^{n} \mu_{k}}{B_{n}}<br>$$<br>的分布函数 $F_{n}(x)$ 对于任意 $x$,满足<br>$$<br>\begin{aligned}<br>\lim <em>{n \rightarrow \infty} F</em>{n}(x) &amp;=\lim <em>{n \rightarrow \infty} P\left{\frac{\sum</em>{k=1}^{n} X_{k}-\sum_{k=1}^{n} \mu_{k}}{B_{n}} \leqslant x\right} \<br>&amp;=\int_{-\infty}^{x} \frac{1}{\sqrt{2 \pi}} \mathrm{e}^{-t^{2} / 2} \mathrm{~d} t=\Phi(x)<br>\end{aligned}<br>$$</p>
+<p>定理二表明，在定理的条件下,随机变量<br>$$<br>Z_{n}=\frac{\sum_{k=1}^{n} X_{k}-\sum_{k=1}^{n} \mu_{k}}{B_{n}}<br>$$<br>当 $n$ 很 大 时，近 似 地 服 从 正 态 分 布 $N(0,1) .$ 由 此，当 $n$ 很 大 时， $\sum_{k=1}^{n} X_{k}=B_{n} Z_{n}+\sum_{k=1}^{n} \mu_{k}$ 近似地服从正态分布 $N\left(\sum_{k=1}^{n} \mu_{k}, B_{n}^{2}\right) .$ 这就是说,无论各个随机变量 $X_{k} \quad(k=1,2, \cdots)$ 服从什么分布, 只要满足定理的条件,那么它们的和 $\sum_{k=1}^{n} X_{k}$ 当 $n$ 很大时,就近似地服从正态分布.  </p>
+</li>
+</ul>
+<ul>
+<li><p><strong>定理一的特殊情况.定理三(棣莫弗一拉普拉斯 (De Moivre-Laplace)定理)</strong> </p>
+<p>设随机变量 $\eta_{n}(n$ $=1,2, \cdots)$ 服从参数为 $n, p(0&lt;p&lt;1)$ 的二项分布,则对于任意 $x,$ 有<br>$$<br>\lim <em>{n \rightarrow \infty} P\left{\frac{\eta</em>{n}-n p}{\sqrt{n p(1-p)}} \leqslant x\right}=\int_{-\infty}^{x} \frac{1}{\sqrt{2 \pi}} \mathrm{e}^{-t^{2} / 2} \mathrm{~d} t=\Phi(x)<br>$$<br>这个定理表明,正态分布是二项分布的极限分布.当 $n$ 充分大时,我们可以利用该式来计算二项分布的概率. </p>
+</li>
+</ul>
+
     </div>
 
     
@@ -213,7 +722,10 @@
     <a href="/2020/11/02/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0_%E5%90%8C%E6%B5%8E%E5%A4%A7%E5%AD%A6/" rel="prev" title="线性代数_同济大学">
       <i class="fa fa-chevron-left"></i> 线性代数_同济大学
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/11/23/word%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0/" rel="next" title="word教程笔记">
+      word教程笔记 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -272,6 +784,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%A6%82%E7%8E%87%E8%AE%BA%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">第一章 概率论的基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E9%9A%8F%E6%9C%BA%E8%AF%95%E9%AA%8C"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 随机试验</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E6%A0%B7%E6%9C%AC%E7%A9%BA%E9%97%B4%E3%80%81%E9%9A%8F%E6%9C%BA%E4%BA%8B%E4%BB%B6"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 样本空间、随机事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-%E9%A2%91%E7%8E%87%E4%B8%8E%E6%A6%82%E7%8E%87"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 频率与概率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-%E7%AD%89%E5%8F%AF%E8%83%BD%E6%A6%82%E5%9E%8B%EF%BC%88%E5%8F%A4%E5%85%B8%E6%A6%82%E5%9E%8B%EF%BC%89"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 等可能概型（古典概型）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-%E6%9D%A1%E4%BB%B6%E6%A6%82%E7%8E%87"><span class="nav-number">1.5.</span> <span class="nav-text">1.5 条件概率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-6-%E7%8B%AC%E7%AB%8B%E6%80%A7"><span class="nav-number">1.6.</span> <span class="nav-text">1.6 独立性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E5%88%86%E5%B8%83"><span class="nav-number">2.</span> <span class="nav-text">第二章 随机变量及其分布</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 随机变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E7%A6%BB%E6%95%A3%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E5%88%86%E5%B8%83%E5%BE%8B"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 离散型随机变量及其分布律</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E5%88%86%E5%B8%83%E5%87%BD%E6%95%B0"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 随机变量的分布函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E6%A6%82%E7%8E%87%E5%AF%86%E5%BA%A6"><span class="nav-number">2.4.</span> <span class="nav-text">3.4 连续型随机变量及其概率密度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E5%87%BD%E6%95%B0%E7%9A%84%E5%88%86%E5%B8%83"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 随机变量的函数的分布</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%A4%9A%E7%BB%B4%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E5%88%86%E5%B8%83"><span class="nav-number">3.</span> <span class="nav-text">第三章 多维随机变量及其分布</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E4%BA%8C%E7%BB%B4%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 二维随机变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-%E8%BE%B9%E7%BC%98%E5%88%86%E5%B8%83"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 边缘分布</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-%E6%9D%A1%E4%BB%B6%E5%88%86%E5%B8%83"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 条件分布</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-%E7%9B%B8%E4%BA%92%E7%8B%AC%E7%AB%8B%E7%9A%84%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F"><span class="nav-number">3.4.</span> <span class="nav-text">3.4 相互独立的随机变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-5-%E4%B8%A4%E4%B8%AA%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E5%87%BD%E6%95%B0%E7%9A%84%E5%88%86%E5%B8%83"><span class="nav-number">3.5.</span> <span class="nav-text">3.5 两个随机变量的函数的分布</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E6%95%B0%E5%AD%97%E7%89%B9%E5%BE%81"><span class="nav-number">4.</span> <span class="nav-text">第四章 随机变量的数字特征</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-%E6%95%B0%E5%AD%A6%E6%9C%9F%E6%9C%9B"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 数学期望</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-%E6%96%B9%E5%B7%AE"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 方差</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-%E5%8D%8F%E6%96%B9%E5%B7%AE%E4%B8%8E%E7%9B%B8%E5%85%B3%E7%B3%BB%E6%95%B0"><span class="nav-number">4.3.</span> <span class="nav-text">4.3 协方差与相关系数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-4-%E7%9F%A9%E3%80%81%E5%8D%8F%E6%96%B9%E5%B7%AE%E7%9F%A9%E9%98%B5"><span class="nav-number">4.4.</span> <span class="nav-text">4.4 矩、协方差矩阵</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%A4%A7%E6%95%B0%E5%AE%9A%E7%90%86%E5%8F%8A%E4%B8%AD%E5%BF%83%E6%9E%81%E9%99%90%E5%AE%9A%E7%90%86"><span class="nav-number">5.</span> <span class="nav-text">第五章 大数定理及中心极限定理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B"><span class="nav-number">5.1.</span> <span class="nav-text">5.1 大数定律</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-2-%E4%B8%AD%E5%BF%83%E6%9E%81%E9%99%90%E5%AE%9A%E7%90%86"><span class="nav-number">5.2.</span> <span class="nav-text">5.2 中心极限定理</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -285,7 +798,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
