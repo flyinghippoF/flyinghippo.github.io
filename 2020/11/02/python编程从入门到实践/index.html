@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="《Python编程：从入门到实践》，作者Eric Matthes，译者袁国忠，由人民邮电出版社于2016年7月出版。 PS：  前十章内容简单，好多东西都没总结进来 第十一章测试程序以后可以写一下 项目一：外星人入侵先不完整的看，第十二、十三、十四章略 项目二数据的可视化要认真地理解json和csv的应用和matplotlib，以后用处比较大  知识点复习复习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python编程从入门到实践">
+<meta property="og:url" content="http://example.com/2020/11/02/python%E7%BC%96%E7%A8%8B%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5/index.html">
+<meta property="og:site_name" content="flyinghippo">
+<meta property="og:description" content="《Python编程：从入门到实践》，作者Eric Matthes，译者袁国忠，由人民邮电出版社于2016年7月出版。 PS：  前十章内容简单，好多东西都没总结进来 第十一章测试程序以后可以写一下 项目一：外星人入侵先不完整的看，第十二、十三、十四章略 项目二数据的可视化要认真地理解json和csv的应用和matplotlib，以后用处比较大  知识点复习复习">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-11-01T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-12-01T14:06:47.857Z">
+<meta property="article:author" content="hippo">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2020/11/02/python%E7%BC%96%E7%A8%8B%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>python编程从入门到实践 | flyinghippo</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">flyinghippo</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/02/python%E7%BC%96%E7%A8%8B%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="hippo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="flyinghippo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          python编程从入门到实践
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-11-02 00:00:00" itemprop="dateCreated datePublished" datetime="2020-11-02T00:00:00+08:00">2020-11-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-12-01 22:06:47" itemprop="dateModified" datetime="2020-12-01T22:06:47+08:00">2020-12-01</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>《Python编程：从入门到实践》，作者Eric Matthes，译者袁国忠，由人民邮电出版社于2016年7月出版。</p>
+<p>PS：</p>
+<ul>
+<li>前十章内容简单，好多东西都没总结进来</li>
+<li>第十一章测试程序以后可以写一下</li>
+<li>项目一：外星人入侵先不完整的看，第十二、十三、十四章略</li>
+<li>项目二数据的可视化要认真地理解json和csv的应用和matplotlib，以后用处比较大</li>
+</ul>
+<p>知识点复习复习</p>
+<a id="more"></a>
+<h1 id="第1章-起步"><a href="#第1章-起步" class="headerlink" title="第1章　起步"></a>第1章　起步</h1><h2 id="1-1-搭建编程环境"><a href="#1-1-搭建编程环境" class="headerlink" title="1.1　搭建编程环境　"></a>1.1　搭建编程环境　</h2><p>略</p>
+<h1 id="第2章-变量和简单数据类型"><a href="#第2章-变量和简单数据类型" class="headerlink" title="第2章　变量和简单数据类型"></a>第2章　变量和简单数据类型</h1><h2 id="2-1-运行hello-world-py时发生的情况"><a href="#2-1-运行hello-world-py时发生的情况" class="headerlink" title="2.1　运行hello_world.py时发生的情况"></a>2.1　运行hello_world.py时发生的情况</h2><p>略</p>
+<h2 id="2-2-变量-16"><a href="#2-2-变量-16" class="headerlink" title="2.2　变量　16"></a>2.2　变量　16</h2><ul>
+<li>变量命名规则：<ul>
+<li>变量名只能包含字母、数字和下划线。变量名可以字母或下划线打头，但不能以数字打头，例如，可将变量命名为message_1，但不能将其命名为1_message。</li>
+<li>变量名不能包含空格，但可使用下划线来分隔其中的单词。例如，变量名greeting_message可行，但变量名greeting message会引发错误。</li>
+<li>不要将Python关键字和函数名用作变量名，即不要使用Python保留用于特殊用途的单词，如print（请参见附录A.4）。</li>
+<li>变量名应既简短又具有描述性。例如，name比n好，student_name比s_n好，name_length比length_of_persons_name好。</li>
+<li>慎用小写字母l和大写字母O，因为它们可能被人错看成数字1和0。</li>
+<li>在变量名中使用大写字母虽然不会导致错误，但避免使用大写字母是个不错的主意。</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-3-字符串-18"><a href="#2-3-字符串-18" class="headerlink" title="2.3　字符串　18"></a>2.3　字符串　18</h2><ul>
+<li>在Python中，用引号括起的都是字符串，其中的引号可以是单引号，也可以是双引号</li>
+<li>方法：title()、upper()、lower()</li>
+<li>删除空格：rstrip()、lstrip()、strip()  这种删除只是暂时的，要永久删除这个字符串中的空白，必须将删除操作的结果存回到变量中</li>
+</ul>
+<h2 id="2-4-数字-24"><a href="#2-4-数字-24" class="headerlink" title="2.4　数字　24"></a>2.4　数字　24</h2><ul>
+<li>str()</li>
+</ul>
+<h2 id="2-5-注释-27"><a href="#2-5-注释-27" class="headerlink" title="2.5　注释　27"></a>2.5　注释　27</h2><ul>
+<li>在Python中，注释用井号（#）标识。井号后面的内容都会被Python解释器忽略</li>
+</ul>
+<h2 id="2-6-Python之禅-28"><a href="#2-6-Python之禅-28" class="headerlink" title="2.6　Python之禅　28"></a>2.6　Python之禅　28</h2><ul>
+<li>import this</li>
+</ul>
+<h2 id="2-7-小结-30"><a href="#2-7-小结-30" class="headerlink" title="2.7　小结　30"></a>2.7　小结　30</h2><h1 id="第3章-列表简介-31"><a href="#第3章-列表简介-31" class="headerlink" title="第3章　列表简介　31"></a>第3章　列表简介　31</h1><h2 id="3-1-列表是什么-31"><a href="#3-1-列表是什么-31" class="headerlink" title="3.1　列表是什么　31"></a>3.1　列表是什么　31</h2><ul>
+<li>列表、索引</li>
+</ul>
+<h2 id="3-2-修改、添加和删除元素-33"><a href="#3-2-修改、添加和删除元素-33" class="headerlink" title="3.2　修改、添加和删除元素　33"></a>3.2　修改、添加和删除元素　33</h2><ul>
+<li>修改：直接赋值</li>
+<li>添加(方法)：append()、insert()</li>
+<li>删除（方法）：del()、pop()、remove()</li>
+</ul>
+<h2 id="3-3-组织列表-39"><a href="#3-3-组织列表-39" class="headerlink" title="3.3　组织列表　39"></a>3.3　组织列表　39</h2><ul>
+<li>方法sort：永久性改变</li>
+<li>sorted()：临时性排序</li>
+<li>方法reverse()永久性地修改列表元素的排列顺序</li>
+<li>函数len()可快速获悉列表的长度</li>
+</ul>
+<h2 id="3-4-使用列表时避免索引错误-42"><a href="#3-4-使用列表时避免索引错误-42" class="headerlink" title="3.4　使用列表时避免索引错误　42"></a>3.4　使用列表时避免索引错误　42</h2><p>略</p>
+<h2 id="3-5-小结-43"><a href="#3-5-小结-43" class="headerlink" title="3.5　小结　43"></a>3.5　小结　43</h2><p>略</p>
+<h1 id="第4章-操作列表-44"><a href="#第4章-操作列表-44" class="headerlink" title="第4章　操作列表　44"></a>第4章　操作列表　44</h1><h2 id="4-1-遍历整个列表-44"><a href="#4-1-遍历整个列表-44" class="headerlink" title="4.1　遍历整个列表　44"></a>4.1　遍历整个列表　44</h2><ul>
+<li>for循环</li>
+</ul>
+<h2 id="4-2-避免缩进错误-47"><a href="#4-2-避免缩进错误-47" class="headerlink" title="4.2　避免缩进错误　47"></a>4.2　避免缩进错误　47</h2><p>略</p>
+<h2 id="4-3-创建数值列表-51"><a href="#4-3-创建数值列表-51" class="headerlink" title="4.3　创建数值列表　51"></a>4.3　创建数值列表　51</h2><ul>
+<li><p>range() </p>
+</li>
+<li><p>列表解析</p>
+<p>　　[expression for iter_val in iterable]</p>
+<p>  　　[expression for iter_val in iterable if cond_expr]</p>
+</li>
+</ul>
+<h2 id="4-4-使用列表的一部分-54"><a href="#4-4-使用列表的一部分-54" class="headerlink" title="4.4　使用列表的一部分　54"></a>4.4　使用列表的一部分　54</h2><ul>
+<li>列表切片</li>
+<li>列表变量名直接赋值是浅复制，如果需要建立一个独立的副本，可使用包含整个列表的切片，方法是同时省略起始索引和终止索引（[:]）</li>
+</ul>
+<h2 id="4-5-元组-59"><a href="#4-5-元组-59" class="headerlink" title="4.5　元组　59"></a>4.5　元组　59</h2><ul>
+<li>元组不能单个修改某一个变量的值，但是可以整体赋值</li>
+</ul>
+<h2 id="4-6-设置代码格式-61"><a href="#4-6-设置代码格式-61" class="headerlink" title="4.6　设置代码格式　61"></a>4.6　设置代码格式　61</h2><ul>
+<li>pep8</li>
+</ul>
+<h2 id="4-7-小结-63"><a href="#4-7-小结-63" class="headerlink" title="4.7　小结　63"></a>4.7　小结　63</h2><h1 id="第5章-if语句-64"><a href="#第5章-if语句-64" class="headerlink" title="第5章　if语句　64"></a>第5章　if语句　64</h1><h2 id="5-1-一个简单示例-64"><a href="#5-1-一个简单示例-64" class="headerlink" title="5.1　一个简单示例　64"></a>5.1　一个简单示例　64</h2><h2 id="5-2-条件测试-65"><a href="#5-2-条件测试-65" class="headerlink" title="5.2　条件测试　65"></a>5.2　条件测试　65</h2><h2 id="5-3-if语句-70"><a href="#5-3-if语句-70" class="headerlink" title="5.3　if语句　70"></a>5.3　if语句　70</h2><h2 id="5-4-使用if语句处理列表-76"><a href="#5-4-使用if语句处理列表-76" class="headerlink" title="5.4　使用if语句处理列表　76"></a>5.4　使用if语句处理列表　76</h2><h2 id="5-5-设置if语句的格式-80"><a href="#5-5-设置if语句的格式-80" class="headerlink" title="5.5　设置if语句的格式　80"></a>5.5　设置if语句的格式　80</h2><h2 id="5-6-小结-80"><a href="#5-6-小结-80" class="headerlink" title="5.6　小结　80"></a>5.6　小结　80</h2><p>第6章　字典　81</p>
+<p>6.1　一个简单的字典　81</p>
+<p>6.2　使用字典　82</p>
+<p>6.3　遍历字典　87</p>
+<ul>
+<li>for key, value in user_0.items():</li>
+<li></li>
+</ul>
+<p>6.4　嵌套　93</p>
+<p>6.5　小结　99</p>
+<p>第7章　用户输入和while循环　100</p>
+<p>7.1　函数input()的工作原理　100</p>
+<p>7.2　while循环简介　104</p>
+<p>7.3　使用while循环来处理列表和字典　110</p>
+<p>7.4　小结　113</p>
+<h1 id="第8章-函数-114"><a href="#第8章-函数-114" class="headerlink" title="第8章　函数　114"></a>第8章　函数　114</h1><h2 id="8-1-定义函数-114"><a href="#8-1-定义函数-114" class="headerlink" title="8.1　定义函数　114"></a>8.1　定义函数　114</h2><h2 id="8-2-传递实参-116"><a href="#8-2-传递实参-116" class="headerlink" title="8.2　传递实参　116"></a>8.2　传递实参　116</h2><h2 id="8-3-返回值-121"><a href="#8-3-返回值-121" class="headerlink" title="8.3　返回值　121"></a>8.3　返回值　121</h2><h2 id="8-4-传递列表-126"><a href="#8-4-传递列表-126" class="headerlink" title="8.4　传递列表　126"></a>8.4　传递列表　126</h2><h2 id="8-5-传递任意数量的实参-130"><a href="#8-5-传递任意数量的实参-130" class="headerlink" title="8.5　传递任意数量的实参　130"></a>8.5　传递任意数量的实参　130</h2><h2 id="8-6-将函数存储在模块中-133"><a href="#8-6-将函数存储在模块中-133" class="headerlink" title="8.6　将函数存储在模块中　133"></a>8.6　将函数存储在模块中　133</h2><h2 id="8-7-函数编写指南-136"><a href="#8-7-函数编写指南-136" class="headerlink" title="8.7　函数编写指南　136"></a>8.7　函数编写指南　136</h2><h2 id="8-8-小结-137"><a href="#8-8-小结-137" class="headerlink" title="8.8　小结　137"></a>8.8　小结　137</h2><h1 id="第9章-类-138"><a href="#第9章-类-138" class="headerlink" title="第9章　类　138"></a>第9章　类　138</h1><h2 id="9-1-创建和使用类-138"><a href="#9-1-创建和使用类-138" class="headerlink" title="9.1　创建和使用类　138"></a>9.1　创建和使用类　138</h2><h2 id="9-2-使用类和实例-142"><a href="#9-2-使用类和实例-142" class="headerlink" title="9.2　使用类和实例　142"></a>9.2　使用类和实例　142</h2><h2 id="9-3-继承-147"><a href="#9-3-继承-147" class="headerlink" title="9.3　继承　147"></a>9.3　继承　147</h2><h2 id="9-4-导入类-153"><a href="#9-4-导入类-153" class="headerlink" title="9.4　导入类　153"></a>9.4　导入类　153</h2><h2 id="9-5-Python标准库-159"><a href="#9-5-Python标准库-159" class="headerlink" title="9.5　Python标准库　159"></a>9.5　Python标准库　159</h2><h2 id="9-6-类编码风格-161"><a href="#9-6-类编码风格-161" class="headerlink" title="9.6　类编码风格　161"></a>9.6　类编码风格　161</h2><h2 id="9-7-小结-161"><a href="#9-7-小结-161" class="headerlink" title="9.7　小结　161"></a>9.7　小结　161</h2><h1 id="第10章-文件和异常-162"><a href="#第10章-文件和异常-162" class="headerlink" title="第10章　文件和异常　162"></a>第10章　文件和异常　162</h1><h2 id="10-1-从文件中读取数据-162"><a href="#10-1-从文件中读取数据-162" class="headerlink" title="10.1　从文件中读取数据　162"></a>10.1　从文件中读取数据　162</h2><h2 id="10-2-写入文件-169"><a href="#10-2-写入文件-169" class="headerlink" title="10.2　写入文件　169"></a>10.2　写入文件　169</h2><ul>
+<li><p>Python只能将字符串写入文本文件。</p>
+</li>
+<li><p>函数write()不会在你写入的文本末尾添加换行符</p>
+</li>
+</ul>
+<h2 id="10-3-异常-172"><a href="#10-3-异常-172" class="headerlink" title="10.3　异常　172"></a>10.3　异常　172</h2><h2 id="10-4-存储数据-180"><a href="#10-4-存储数据-180" class="headerlink" title="10.4　存储数据　180"></a>10.4　存储数据　180</h2><h2 id="10-5-小结-186"><a href="#10-5-小结-186" class="headerlink" title="10.5　小结　186"></a>10.5　小结　186</h2><h1 id="第11章-测试代码-187"><a href="#第11章-测试代码-187" class="headerlink" title="第11章　测试代码　187"></a>第11章　测试代码　187</h1><h2 id="11-1-测试函数-187"><a href="#11-1-测试函数-187" class="headerlink" title="11.1　测试函数　187"></a>11.1　测试函数　187</h2><ul>
+<li><p>Python标准库中的模块unittest提供了代码测试工具</p>
+</li>
+<li><p>要为函数编写测试用例，可先导入模块unittest以及要测试的函数，再创建一个继承unittest.TestCase的类，并编写一系列方法对函数行为的不同方面进行测试。</p>
+</li>
+<li><p>```python</p>
+<h2 id="name-function-py"><a href="#name-function-py" class="headerlink" title="name_function.py"></a>name_function.py</h2><p>def get_formatted_name(first, last):</p>
+<pre><code>&quot;&quot;&quot;Generate a neatly formatted full name.&quot;&quot;&quot;
+full_name = first + &#39; &#39; + last
+return full_name.title()
+</code></pre><hr>
+<h2 id="test-name-function-py-样例"><a href="#test-name-function-py-样例" class="headerlink" title="test_name_ function.py # 样例"></a>test_name_ function.py # 样例</h2><p>import unittest<br>from name_function import get_formatted_name</p>
+<p>class NamesTestCase(unittest.TestCase):</p>
+<pre><code>&quot;&quot;&quot;测试name_function.py&quot;&quot;&quot;
+def test_first_last_name(self):
+    &quot;&quot;&quot;能够正确地处理像Janis Joplin这样的姓名吗？&quot;&quot;&quot;
+    formatted_name = get_formatted_name(&#39;janis&#39;, &#39;joplin&#39;)
+    self.assertEqual(formatted_name, &#39;Janis Joplin&#39;)
+</code></pre><p>unittest.main()</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 注意的点：</span><br><span class="line"></span><br><span class="line">  - 导入模块unittest</span><br><span class="line">  - 创建一个类，这个类必须继承unittest.TestCase类</span><br><span class="line">  - 运行test_name_function.py时，所有以test_打头的方法都将自动运行。</span><br><span class="line"></span><br><span class="line">## 11.2　测试类　193</span><br><span class="line"></span><br><span class="line">- unittest Module中的断言方法</span><br><span class="line"></span><br><span class="line">- 方 法           用 途</span><br><span class="line">  assertEqual(a, b)     核实a &#x3D;&#x3D; b</span><br><span class="line">  assertNotEqual(a, b)     核实a !&#x3D; b</span><br><span class="line">  assertTrue(x)     核实x为True</span><br><span class="line">  assertFalse(x)     核实x为False</span><br><span class="line">  assertIn(item, list)     核实item在list中</span><br><span class="line">  assertNotIn(item, list)     核实item不在list中</span><br><span class="line"></span><br><span class="line">- unittest.TestCase类包含方法setUp()，让我们只需创建这些对象一次，并在每个测试方法中使用它们。</span><br><span class="line"></span><br><span class="line">- 样例：</span><br><span class="line"></span><br><span class="line">  - &#96;&#96;&#96;python</span><br><span class="line">    class AnonymousSurvey():</span><br><span class="line">    	&quot;&quot;&quot;收集匿名调查问卷的答案&quot;&quot;&quot;</span><br><span class="line">        def __init__(self, question):</span><br><span class="line">            &quot;&quot;&quot;存储一个问题，并为存储答案做准备&quot;&quot;&quot;</span><br><span class="line">            self.question &#x3D; question</span><br><span class="line">            self.responses &#x3D; []</span><br><span class="line">            </span><br><span class="line">        def show_question(self):</span><br><span class="line">            &quot;&quot;&quot;显示调查问卷&quot;&quot;&quot;</span><br><span class="line">            print(question)</span><br><span class="line">            </span><br><span class="line">        def store_response(self, new_response):</span><br><span class="line">            &quot;&quot;&quot;存储单份调查答卷&quot;&quot;&quot;</span><br><span class="line">            self.responses.append(new_response)</span><br><span class="line">            </span><br><span class="line">        def show_results(self):</span><br><span class="line">            &quot;&quot;&quot;显示收集到的所有答卷&quot;&quot;&quot;</span><br><span class="line">            print(&quot;Survey results:&quot;)</span><br><span class="line">            for response in responses:</span><br><span class="line">            	print(&#39;- &#39; + response)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>```python<br>import unittest<br>from survey import AnonymousSurvey</p>
+<p>class TestAnonymousSurvey(unittest.TestCase):</p>
+<pre><code>&quot;&quot;&quot;针对AnonymousSurvey类的测试&quot;&quot;&quot;
+def setUp(self):
+&quot;&quot;&quot;
+创建一个调查对象和一组答案，供使用的测试方法使用
+&quot;&quot;&quot;
+question = &quot;What language did you first learn to speak?&quot;
+self.my_survey = AnonymousSurvey(question)
+self.responses = [&#39;English&#39;, &#39;Spanish&#39;, &#39;Mandarin&#39;]
+
+def test_store_single_response(self):
+    &quot;&quot;&quot;测试单个答案会被妥善地存储&quot;&quot;&quot;
+    self.my_survey.store_response(self.responses[0])
+    self.assertIn(self.responses[0], self.my_survey.responses)
+
+def test_store_three_responses(self):
+    &quot;&quot;&quot;测试三个答案会被妥善地存储&quot;&quot;&quot;
+    for response in self.responses:
+        self.my_survey.store_response(response)
+    for response in self.responses:
+        self.assertIn(response, self.my_survey.responses)
+</code></pre></li>
+</ul>
+<pre><code>unittest.main()
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">## 11.3　小结　199</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 项目1 外星人入侵　202</span><br><span class="line"></span><br><span class="line">第12章　武装飞船　203</span><br><span class="line"></span><br><span class="line">12.1　规划项目　203</span><br><span class="line"></span><br><span class="line">12.2　安装Pygame　204</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">12.3　开始游戏项目　207</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">12.4　添加飞船图像　211</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">12.5　重构：模块game_functions　214</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">12.6　驾驶飞船　216</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">12.7　简单回顾　223</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">12.8　射击　224</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">12.9　小结　231</span><br><span class="line"></span><br><span class="line">第13章　外星人　232</span><br><span class="line"></span><br><span class="line">13.1　回顾项目　232</span><br><span class="line"></span><br><span class="line">13.2　创建第一个外星人　233</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">13.3　创建一群外星人　236</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">13.4　让外星人群移动　242</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">13.5　射杀外星人　246</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">13.6　结束游戏　250</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">13.7　确定应运行游戏的哪些部分　255</span><br><span class="line"></span><br><span class="line">13.8　小结　256</span><br><span class="line"></span><br><span class="line">第14章　记分　257</span><br><span class="line"></span><br><span class="line">14.1　添加Play 按钮　257</span><br><span class="line"></span><br><span class="line">14.1.1　创建Button类　258</span><br><span class="line"></span><br><span class="line">14.1.2　在屏幕上绘制按钮　259</span><br><span class="line"></span><br><span class="line">14.1.3　开始游戏　261</span><br><span class="line"></span><br><span class="line">14.1.4　重置游戏　261</span><br><span class="line"></span><br><span class="line">14.1.5　将Play 按钮切换到非活动状态　263</span><br><span class="line"></span><br><span class="line">14.1.6　隐藏光标　263</span><br><span class="line"></span><br><span class="line">14.2　提高等级　264</span><br><span class="line"></span><br><span class="line">14.2.1　修改速度设置　264</span><br><span class="line"></span><br><span class="line">14.2.2　重置速度　266</span><br><span class="line"></span><br><span class="line">14.3　记分　267</span><br><span class="line"></span><br><span class="line">14.3.1　显示得分　267</span><br><span class="line"></span><br><span class="line">14.3.2　创建记分牌　268</span><br><span class="line"></span><br><span class="line">14.3.3　在外星人被消灭时更新得分　270</span><br><span class="line"></span><br><span class="line">14.3.4　将消灭的每个外星人的点数都计入得分　271</span><br><span class="line"></span><br><span class="line">14.3.5　提高点数　271</span><br><span class="line"></span><br><span class="line">14.3.6　将得分圆整　272</span><br><span class="line"></span><br><span class="line">14.3.7　最高得分　274</span><br><span class="line"></span><br><span class="line">14.3.8　显示等级　276</span><br><span class="line"></span><br><span class="line">14.3.9　显示余下的飞船数　279</span><br><span class="line"></span><br><span class="line">14.4　小结　283</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 项目2 数据可视化　284</span><br><span class="line"></span><br><span class="line">## 第15章　生成数据　285</span><br><span class="line"></span><br><span class="line">## 15.1　安装matplotlib　285</span><br><span class="line"></span><br><span class="line">略</span><br><span class="line"></span><br><span class="line">## 15.2　绘制简单的折线图　287</span><br><span class="line"></span><br><span class="line">- &#96;&#96;&#96;python</span><br><span class="line">  import matplotlib.pyplot as plt</span><br></pre></td></tr></table></figure>
+</code></pre><p>  模块pyplot包含很多用于生成图表的函数。</p>
+<ul>
+<li><p>plt.plot()：这个函数尝试根据这些数字绘制出有意义的图形</p>
+</li>
+<li><p>plt.show()：打开matplotlib查看器，并显示绘制的图形</p>
+</li>
+<li><p>eg：plt.plot(squares, linewidth=5)  参数linewidth决定了plot()绘制的线条的粗细。</p>
+</li>
+<li><p>函数plt.title()给图表指定标题。参数fontsize指定了图表中文字的大小。</p>
+</li>
+<li><p>函数xlabel()和ylabel()让你能够为每条轴设置标题</p>
+</li>
+<li><p>函数tick_params()设置刻度的样式，其中指定的实参将影响x轴和y轴上的刻度（axes=’both’），并将刻度标记的字号设置为14（labelsize=14）</p>
+</li>
+</ul>
+<ul>
+<li>要绘制单个点，可使用函数scatter()，并向它传递一对x和y坐标，它将在指定位置绘制一个点：plt.scatter(2, 4)</li>
+<li>要绘制一系列的点，可向scatter()传递两个分别包含x值和y值的列表</li>
+<li>函数axis()指定了每个坐标轴的取值范围。要求提供四个值：x和y坐标轴的最小值和最大值。</li>
+<li>matplotlib允许你给散点图中的各个点指定颜色。默认为蓝色点和黑色轮廓，要删除数据点的轮廓，可在调用scatter()时传递实参edgecolor=’none’。</li>
+<li>要修改数据点的颜色，可向scatter()传递参数c，并将其设置为要使用的颜色的名称。还可以使用RGB颜色模式自定义颜色。要指定自定义颜色，可传递参数c，并将其设置为一个元组，其中包含三个0~1之间的小数值，它们分别表示红色、绿色和蓝色分量。</li>
+</ul>
+<ul>
+<li><p>颜色映射（colormap）是一系列颜色，它们从起始颜色渐变到结束颜色。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.scatter(x_values, y_values, c=y_values, cmap=plt.cm.Blues,edgecolor=<span class="string">&#x27;none&#x27;</span>, s=<span class="number">40</span>)</span><br></pre></td></tr></table></figure>
+<p>将参数c设置成了一个y值列表，并使用参数cmap告诉pyplot使用哪个颜色映射。</p>
+</li>
+<li><p>要让程序<strong>自动将图表保存</strong>到文件中，可将对plt.show()的调用替换为对plt.savefig()的调用</p>
+</li>
+<li><p>```python</p>
+<h1 id="隐藏坐标轴"><a href="#隐藏坐标轴" class="headerlink" title="隐藏坐标轴"></a>隐藏坐标轴</h1><p>plt.axes().get_xaxis().set_visible(False)<br>plt.axes().get_yaxis().set_visible(False)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- 函数figure()用于指定图表的宽度、高度、分辨率和背景色。形参figsize指定一个元组，向matplotlib指出绘图窗口的尺寸，单位为英寸。可使用形参dpi向figure()传递该分辨率。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 15.3　随机漫步　295</span><br><span class="line"></span><br><span class="line">略</span><br><span class="line"></span><br><span class="line">## 15.4　使用Pygal模拟掷骰子　303</span><br><span class="line"></span><br><span class="line">- Python可视化包Pygal来生成可缩放的矢量图形文件</span><br><span class="line">- http:&#x2F;&#x2F;www.pygal.org&#x2F;en&#x2F;stable&#x2F;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 15.5　小结　311</span><br><span class="line"></span><br><span class="line">略</span><br><span class="line"></span><br><span class="line"># 第16章　下载数据　312</span><br><span class="line"></span><br><span class="line">## 16.1　CSV文件格式　312</span><br><span class="line"></span><br><span class="line">- 数据作为一系列以逗号分隔的值（CSV）写入文件。这样的文件称为CSV文件。</span><br><span class="line">- csv模块包含在Python标准库中，可用于分析CSV文件中的数据行</span><br><span class="line">- csv.reader()，将前面存储的文件对象作为实参传递给它，从而创建一个与该文件相关联的阅读器（reader）对象</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- 方法fill_between()，它接受一个x值系列和两个y值系列，并填充两个y值系列之间的空间。实参alpha指定颜色的透明度。Alpha值为0表示完全透明，1（默认设置）表示完全不透明。</span><br><span class="line"></span><br><span class="line">## 16.2　制作世界人口地图：JSON格式　324</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 16.3　小结　337</span><br><span class="line"></span><br><span class="line"># 第17章　使用API　338</span><br><span class="line"></span><br><span class="line">## 17.1　使用Web API　338</span><br><span class="line"></span><br><span class="line">- requests包让Python程序能够轻松地向网站请求信息以及检查返回的响应</span><br><span class="line"></span><br><span class="line">- &#96;&#96;&#96;python</span><br><span class="line">  import requests</span><br><span class="line">  </span><br><span class="line">  url &#x3D; &#39;https:&#x2F;&#x2F;api.github.com&#x2F;search&#x2F;repositories?q&#x3D;language:python&amp;sort&#x3D;stars&#39;</span><br><span class="line">  r &#x3D; requests.get(url)</span><br><span class="line">  print(&quot;Status code:&quot;, r.status_code)</span><br><span class="line">  # 将API响应存储在一个变量中</span><br><span class="line">  response_dict &#x3D; r.json()</span><br><span class="line">  # 处理结果</span><br><span class="line">  print(response_dict.keys())</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="17-2-使用Pygal可视化仓库-344"><a href="#17-2-使用Pygal可视化仓库-344" class="headerlink" title="17.2　使用Pygal可视化仓库　344"></a>17.2　使用Pygal可视化仓库　344</h2><h2 id="17-3-Hacker-News-API-350"><a href="#17-3-Hacker-News-API-350" class="headerlink" title="17.3　Hacker News API　350"></a>17.3　Hacker News API　350</h2><h2 id="17-4-小结-353"><a href="#17-4-小结-353" class="headerlink" title="17.4　小结　353"></a>17.4　小结　353</h2><h1 id="项目3-Web-应用程序-354"><a href="#项目3-Web-应用程序-354" class="headerlink" title="项目3 Web 应用程序　354"></a>项目3 Web 应用程序　354</h1><p>第18章　Django入门　355</p>
+<p>18.1　建立项目　355</p>
+<p>18.1.1　制定规范　355</p>
+<p>18.1.2　建立虚拟环境　356</p>
+<p>18.1.3　安装virtualenv　356</p>
+<p>18.1.4　激活虚拟环境　357</p>
+<p>18.1.5　安装Django　357</p>
+<p>18.1.6　在Django中创建项目　357</p>
+<p>18.1.7　创建数据库　358</p>
+<p>18.1.8　查看项目　359</p>
+<p>18.2　创建应用程序　360</p>
+<p>18.2.1　定义模型　360</p>
+<p>18.2.2　激活模型　362</p>
+<p>18.2.3　Django管理网站　363</p>
+<p>18.2.4　定义模型Entry　365</p>
+<p>18.2.5　迁移模型Entry　366</p>
+<p>18.2.6　向管理网站注册Entry　366</p>
+<p>18.2.7　Django shell　367</p>
+<p>18.3　创建网页：学习笔记主页　369</p>
+<p>18.3.1　映射URL　369</p>
+<p>18.3.2　编写视图　371</p>
+<p>18.3.3　编写模板　372</p>
+<p>18.4　创建其他网页　373</p>
+<p>18.4.1　模板继承　373</p>
+<p>18.4.2　显示所有主题的页面　375</p>
+<p>18.4.3　显示特定主题的页面　378</p>
+<p>18.5　小结　381</p>
+<p>第19章　用户账户　382</p>
+<p>19.1　让用户能够输入数据　382</p>
+<p>19.1.1　添加新主题　382</p>
+<p>19.1.2　添加新条目　386</p>
+<p>19.1.3　编辑条目　390</p>
+<p>19.2　创建用户账户　392</p>
+<p>19.2.1　应用程序users　393</p>
+<p>19.2.2　登录页面　394</p>
+<p>19.2.3　注销　396</p>
+<p>19.2.4　注册页面　397</p>
+<p>19.3　让用户拥有自己的数据　400</p>
+<p>19.3.1　使用@login_required限制访问　400</p>
+<p>19.3.2　将数据关联到用户　402</p>
+<p>19.3.3　只允许用户访问自己的主题　405</p>
+<p>19.3.4　保护用户的主题　405</p>
+<p>19.3.5　保护页面edit_entry　406</p>
+<p>19.3.6　将新主题关联到当前用户　406</p>
+<p>19.4　小结　408</p>
+<p>第20章　设置应用程序的样式并对其进行部署　409</p>
+<p>20.1　设置项目“学习笔记”的样式　409</p>
+<p>20.1.1　应用程序django-bootstrap3　410</p>
+<p>20.1.2　使用Bootstrap来设置项目“学习笔记”的样式　411</p>
+<p>20.1.3　修改base.html　411</p>
+<p>20.1.4　使用jumbotron设置主页的样式　414</p>
+<p>20.1.5　设置登录页面的样式　415</p>
+<p>20.1.6　设置new_topic页面的样式　416</p>
+<p>20.1.7　设置topics页面的样式　417</p>
+<p>20.1.8　设置topic页面中条目的样式　417</p>
+<p>20.2　部署“学习笔记”　419</p>
+<p>20.2.1　建立Heroku账户　420</p>
+<p>20.2.2　安装Heroku Toolbelt　420</p>
+<p>20.2.3　安装必要的包　420</p>
+<p>20.2.4　创建包含包列表的文件requirements.txt　421</p>
+<p>20.2.5　指定Python版本　422</p>
+<p>20.2.6　为部署到Herohu而修改settings.py　422</p>
+<p>20.2.7　创建启动进程的Procfile　423</p>
+<p>20.2.8　为部署到Herohu而修改wsgi.py　423</p>
+<p>20.2.9　创建用于存储静态文件的目录　424</p>
+<p>20.2.10　在本地使用gunicorn服务器　424</p>
+<p>20.2.11　使用Git跟踪项目文件　425</p>
+<p>20.2.12　推送到Heroku　426</p>
+<p>20.2.13　在Heroku上建立数据库　427</p>
+<p>20.2.14　改进Heroku部署　428</p>
+<p>20.2.15　确保项目的安全　429</p>
+<p>20.2.16　提交并推送修改　430</p>
+<p>20.2.17　创建自定义错误页面　431</p>
+<p>20.2.18　继续开发　434</p>
+<p>20.2.19　设置SECRET_KEY　434</p>
+<p>20.2.20　将项目从Heroku删除　434</p>
+<p>20.3　小结　435</p>
+<p>附录A　安装Python　436</p>
+<p>附录B　文本编辑器　441</p>
+<p>附录C　寻求帮助　447</p>
+<p>附录D　使用Git进行版本控制　451</p>
+<p>后记　460 [1]</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/10/14/C%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%BF%9B%E9%98%B6_%E5%8C%97%E5%A4%A7/" rel="prev" title="C程序设计进阶_北大">
+      <i class="fa fa-chevron-left"></i> C程序设计进阶_北大
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/11/02/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0_%E5%90%8C%E6%B5%8E%E5%A4%A7%E5%AD%A6/" rel="next" title="线性代数_同济大学">
+      线性代数_同济大学 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC1%E7%AB%A0-%E8%B5%B7%E6%AD%A5"><span class="nav-number">1.</span> <span class="nav-text">第1章　起步</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E6%90%AD%E5%BB%BA%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83"><span class="nav-number">1.1.</span> <span class="nav-text">1.1　搭建编程环境　</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC2%E7%AB%A0-%E5%8F%98%E9%87%8F%E5%92%8C%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.</span> <span class="nav-text">第2章　变量和简单数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E8%BF%90%E8%A1%8Chello-world-py%E6%97%B6%E5%8F%91%E7%94%9F%E7%9A%84%E6%83%85%E5%86%B5"><span class="nav-number">2.1.</span> <span class="nav-text">2.1　运行hello_world.py时发生的情况</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E5%8F%98%E9%87%8F-16"><span class="nav-number">2.2.</span> <span class="nav-text">2.2　变量　16</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-%E5%AD%97%E7%AC%A6%E4%B8%B2-18"><span class="nav-number">2.3.</span> <span class="nav-text">2.3　字符串　18</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-%E6%95%B0%E5%AD%97-24"><span class="nav-number">2.4.</span> <span class="nav-text">2.4　数字　24</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-%E6%B3%A8%E9%87%8A-27"><span class="nav-number">2.5.</span> <span class="nav-text">2.5　注释　27</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-6-Python%E4%B9%8B%E7%A6%85-28"><span class="nav-number">2.6.</span> <span class="nav-text">2.6　Python之禅　28</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-7-%E5%B0%8F%E7%BB%93-30"><span class="nav-number">2.7.</span> <span class="nav-text">2.7　小结　30</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC3%E7%AB%A0-%E5%88%97%E8%A1%A8%E7%AE%80%E4%BB%8B-31"><span class="nav-number">3.</span> <span class="nav-text">第3章　列表简介　31</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E5%88%97%E8%A1%A8%E6%98%AF%E4%BB%80%E4%B9%88-31"><span class="nav-number">3.1.</span> <span class="nav-text">3.1　列表是什么　31</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-%E4%BF%AE%E6%94%B9%E3%80%81%E6%B7%BB%E5%8A%A0%E5%92%8C%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0-33"><span class="nav-number">3.2.</span> <span class="nav-text">3.2　修改、添加和删除元素　33</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-%E7%BB%84%E7%BB%87%E5%88%97%E8%A1%A8-39"><span class="nav-number">3.3.</span> <span class="nav-text">3.3　组织列表　39</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-%E4%BD%BF%E7%94%A8%E5%88%97%E8%A1%A8%E6%97%B6%E9%81%BF%E5%85%8D%E7%B4%A2%E5%BC%95%E9%94%99%E8%AF%AF-42"><span class="nav-number">3.4.</span> <span class="nav-text">3.4　使用列表时避免索引错误　42</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-5-%E5%B0%8F%E7%BB%93-43"><span class="nav-number">3.5.</span> <span class="nav-text">3.5　小结　43</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC4%E7%AB%A0-%E6%93%8D%E4%BD%9C%E5%88%97%E8%A1%A8-44"><span class="nav-number">4.</span> <span class="nav-text">第4章　操作列表　44</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-%E9%81%8D%E5%8E%86%E6%95%B4%E4%B8%AA%E5%88%97%E8%A1%A8-44"><span class="nav-number">4.1.</span> <span class="nav-text">4.1　遍历整个列表　44</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-%E9%81%BF%E5%85%8D%E7%BC%A9%E8%BF%9B%E9%94%99%E8%AF%AF-47"><span class="nav-number">4.2.</span> <span class="nav-text">4.2　避免缩进错误　47</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-%E5%88%9B%E5%BB%BA%E6%95%B0%E5%80%BC%E5%88%97%E8%A1%A8-51"><span class="nav-number">4.3.</span> <span class="nav-text">4.3　创建数值列表　51</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-4-%E4%BD%BF%E7%94%A8%E5%88%97%E8%A1%A8%E7%9A%84%E4%B8%80%E9%83%A8%E5%88%86-54"><span class="nav-number">4.4.</span> <span class="nav-text">4.4　使用列表的一部分　54</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-5-%E5%85%83%E7%BB%84-59"><span class="nav-number">4.5.</span> <span class="nav-text">4.5　元组　59</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-6-%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%A0%81%E6%A0%BC%E5%BC%8F-61"><span class="nav-number">4.6.</span> <span class="nav-text">4.6　设置代码格式　61</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-7-%E5%B0%8F%E7%BB%93-63"><span class="nav-number">4.7.</span> <span class="nav-text">4.7　小结　63</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC5%E7%AB%A0-if%E8%AF%AD%E5%8F%A5-64"><span class="nav-number">5.</span> <span class="nav-text">第5章　if语句　64</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%A4%BA%E4%BE%8B-64"><span class="nav-number">5.1.</span> <span class="nav-text">5.1　一个简单示例　64</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-2-%E6%9D%A1%E4%BB%B6%E6%B5%8B%E8%AF%95-65"><span class="nav-number">5.2.</span> <span class="nav-text">5.2　条件测试　65</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-3-if%E8%AF%AD%E5%8F%A5-70"><span class="nav-number">5.3.</span> <span class="nav-text">5.3　if语句　70</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-4-%E4%BD%BF%E7%94%A8if%E8%AF%AD%E5%8F%A5%E5%A4%84%E7%90%86%E5%88%97%E8%A1%A8-76"><span class="nav-number">5.4.</span> <span class="nav-text">5.4　使用if语句处理列表　76</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-5-%E8%AE%BE%E7%BD%AEif%E8%AF%AD%E5%8F%A5%E7%9A%84%E6%A0%BC%E5%BC%8F-80"><span class="nav-number">5.5.</span> <span class="nav-text">5.5　设置if语句的格式　80</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-6-%E5%B0%8F%E7%BB%93-80"><span class="nav-number">5.6.</span> <span class="nav-text">5.6　小结　80</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC8%E7%AB%A0-%E5%87%BD%E6%95%B0-114"><span class="nav-number">6.</span> <span class="nav-text">第8章　函数　114</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#8-1-%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0-114"><span class="nav-number">6.1.</span> <span class="nav-text">8.1　定义函数　114</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-2-%E4%BC%A0%E9%80%92%E5%AE%9E%E5%8F%82-116"><span class="nav-number">6.2.</span> <span class="nav-text">8.2　传递实参　116</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-3-%E8%BF%94%E5%9B%9E%E5%80%BC-121"><span class="nav-number">6.3.</span> <span class="nav-text">8.3　返回值　121</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-4-%E4%BC%A0%E9%80%92%E5%88%97%E8%A1%A8-126"><span class="nav-number">6.4.</span> <span class="nav-text">8.4　传递列表　126</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-5-%E4%BC%A0%E9%80%92%E4%BB%BB%E6%84%8F%E6%95%B0%E9%87%8F%E7%9A%84%E5%AE%9E%E5%8F%82-130"><span class="nav-number">6.5.</span> <span class="nav-text">8.5　传递任意数量的实参　130</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-6-%E5%B0%86%E5%87%BD%E6%95%B0%E5%AD%98%E5%82%A8%E5%9C%A8%E6%A8%A1%E5%9D%97%E4%B8%AD-133"><span class="nav-number">6.6.</span> <span class="nav-text">8.6　将函数存储在模块中　133</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-7-%E5%87%BD%E6%95%B0%E7%BC%96%E5%86%99%E6%8C%87%E5%8D%97-136"><span class="nav-number">6.7.</span> <span class="nav-text">8.7　函数编写指南　136</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-8-%E5%B0%8F%E7%BB%93-137"><span class="nav-number">6.8.</span> <span class="nav-text">8.8　小结　137</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC9%E7%AB%A0-%E7%B1%BB-138"><span class="nav-number">7.</span> <span class="nav-text">第9章　类　138</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#9-1-%E5%88%9B%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8%E7%B1%BB-138"><span class="nav-number">7.1.</span> <span class="nav-text">9.1　创建和使用类　138</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-2-%E4%BD%BF%E7%94%A8%E7%B1%BB%E5%92%8C%E5%AE%9E%E4%BE%8B-142"><span class="nav-number">7.2.</span> <span class="nav-text">9.2　使用类和实例　142</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-3-%E7%BB%A7%E6%89%BF-147"><span class="nav-number">7.3.</span> <span class="nav-text">9.3　继承　147</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-4-%E5%AF%BC%E5%85%A5%E7%B1%BB-153"><span class="nav-number">7.4.</span> <span class="nav-text">9.4　导入类　153</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-5-Python%E6%A0%87%E5%87%86%E5%BA%93-159"><span class="nav-number">7.5.</span> <span class="nav-text">9.5　Python标准库　159</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-6-%E7%B1%BB%E7%BC%96%E7%A0%81%E9%A3%8E%E6%A0%BC-161"><span class="nav-number">7.6.</span> <span class="nav-text">9.6　类编码风格　161</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-7-%E5%B0%8F%E7%BB%93-161"><span class="nav-number">7.7.</span> <span class="nav-text">9.7　小结　161</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC10%E7%AB%A0-%E6%96%87%E4%BB%B6%E5%92%8C%E5%BC%82%E5%B8%B8-162"><span class="nav-number">8.</span> <span class="nav-text">第10章　文件和异常　162</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#10-1-%E4%BB%8E%E6%96%87%E4%BB%B6%E4%B8%AD%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE-162"><span class="nav-number">8.1.</span> <span class="nav-text">10.1　从文件中读取数据　162</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-2-%E5%86%99%E5%85%A5%E6%96%87%E4%BB%B6-169"><span class="nav-number">8.2.</span> <span class="nav-text">10.2　写入文件　169</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-3-%E5%BC%82%E5%B8%B8-172"><span class="nav-number">8.3.</span> <span class="nav-text">10.3　异常　172</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-4-%E5%AD%98%E5%82%A8%E6%95%B0%E6%8D%AE-180"><span class="nav-number">8.4.</span> <span class="nav-text">10.4　存储数据　180</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-5-%E5%B0%8F%E7%BB%93-186"><span class="nav-number">8.5.</span> <span class="nav-text">10.5　小结　186</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC11%E7%AB%A0-%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81-187"><span class="nav-number">9.</span> <span class="nav-text">第11章　测试代码　187</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#11-1-%E6%B5%8B%E8%AF%95%E5%87%BD%E6%95%B0-187"><span class="nav-number">9.1.</span> <span class="nav-text">11.1　测试函数　187</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#name-function-py"><span class="nav-number">9.2.</span> <span class="nav-text">name_function.py</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#test-name-function-py-%E6%A0%B7%E4%BE%8B"><span class="nav-number">9.3.</span> <span class="nav-text">test_name_ function.py # 样例</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9A%90%E8%97%8F%E5%9D%90%E6%A0%87%E8%BD%B4"><span class="nav-number">10.</span> <span class="nav-text">隐藏坐标轴</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#17-2-%E4%BD%BF%E7%94%A8Pygal%E5%8F%AF%E8%A7%86%E5%8C%96%E4%BB%93%E5%BA%93-344"><span class="nav-number">10.1.</span> <span class="nav-text">17.2　使用Pygal可视化仓库　344</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-3-Hacker-News-API-350"><span class="nav-number">10.2.</span> <span class="nav-text">17.3　Hacker News API　350</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-4-%E5%B0%8F%E7%BB%93-353"><span class="nav-number">10.3.</span> <span class="nav-text">17.4　小结　353</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE3-Web-%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F-354"><span class="nav-number">11.</span> <span class="nav-text">项目3 Web 应用程序　354</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">hippo</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">hippo</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>
